@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:post_bid_checklist_name",
+ "creation": "2026-04-30 00:02:54.927513",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "post_bid_checklist_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "post_bid_checklist_name",
+   "fieldtype": "Data",
+   "label": "Post Bid Checklist Name",
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-30 00:02:54.927513",
+ "modified_by": "Administrator",
+ "module": "Tendering",
+ "name": "Post Bid Checklist",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,191 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2026-04-29 19:49:26.573115",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2026-04-29 19:49:26.576964",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2026-04-29 19:49:26.578960",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:39:16.815799",
+  "name": "Approved By Analyzer",
+  "style": "",
+  "workflow_state_name": "Approved By Analyzer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:39:29.185528",
+  "name": "Approved By Technical Evaluator",
+  "style": "",
+  "workflow_state_name": "Approved By Technical Evaluator"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:39:40.065164",
+  "name": "Approved By Financial Evaluator",
+  "style": "",
+  "workflow_state_name": "Approved By Financial Evaluator"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:39:51.727551",
+  "name": "Approved By Sales",
+  "style": "",
+  "workflow_state_name": "Approved By Sales"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:40:07.317914",
+  "name": "Approved By Top Management",
+  "style": "",
+  "workflow_state_name": "Approved By Top Management"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:40:20.790596",
+  "name": "Go For Bid",
+  "style": "",
+  "workflow_state_name": "Go For Bid"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:40:32.354777",
+  "name": "Don't Go For Bid",
+  "style": "",
+  "workflow_state_name": "Don't Go For Bid"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:40:48.597164",
+  "name": "Tender created",
+  "style": "",
+  "workflow_state_name": "Tender created"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:43:49.225521",
+  "name": "In Progress",
+  "style": "",
+  "workflow_state_name": "In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:44:01.225199",
+  "name": "Preliminary Approved",
+  "style": "",
+  "workflow_state_name": "Preliminary Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:44:13.481014",
+  "name": "Commercially Approved",
+  "style": "",
+  "workflow_state_name": "Commercially Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:44:26.879460",
+  "name": "Top Management Approved",
+  "style": "",
+  "workflow_state_name": "Top Management Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:44:51.319435",
+  "name": "Won",
+  "style": "",
+  "workflow_state_name": "Won"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:45:02.373194",
+  "name": "Lost",
+  "style": "",
+  "workflow_state_name": "Lost"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:45:13.544320",
+  "name": "Alloted",
+  "style": "",
+  "workflow_state_name": "Alloted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:45:23.836842",
+  "name": "Project Created",
+  "style": "",
+  "workflow_state_name": "Project Created"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:39:00.129841",
+  "name": "New",
+  "style": "",
+  "workflow_state_name": "New"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-30 00:44:40.054185",
+  "name": "Tender Submitted",
+  "style": "",
+  "workflow_state_name": "Tender Submitted"
+ }
+]

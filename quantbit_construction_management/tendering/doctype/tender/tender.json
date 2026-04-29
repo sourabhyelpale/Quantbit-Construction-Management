@@ -1,0 +1,1059 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-04-30 00:04:12.779272",
+ "description": "Potential Sales Deal",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "email_append_to": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "opportunity_from",
+  "party_name",
+  "customer_name",
+  "status",
+  "column_break0",
+  "opportunity_type",
+  "source",
+  "opportunity_owner",
+  "column_break_10",
+  "sales_stage",
+  "probability",
+  "organization_details_section",
+  "no_of_employees",
+  "annual_revenue",
+  "customer_group",
+  "column_break_23",
+  "industry",
+  "market_segment",
+  "website",
+  "column_break_31",
+  "city",
+  "state",
+  "country",
+  "territory",
+  "section_break_14",
+  "currency",
+  "column_break_36",
+  "conversion_rate",
+  "column_break_17",
+  "opportunity_amount",
+  "base_opportunity_amount",
+  "more_info",
+  "company",
+  "campaign",
+  "transaction_date",
+  "column_break1",
+  "language",
+  "amended_from",
+  "title",
+  "first_response_time",
+  "lost_detail_section",
+  "lost_reasons",
+  "order_lost_reason",
+  "column_break_56",
+  "competitors",
+  "contact_info",
+  "primary_contact_section",
+  "contact_person",
+  "job_title",
+  "column_break_54",
+  "contact_email",
+  "contact_mobile",
+  "column_break_22",
+  "whatsapp",
+  "phone",
+  "phone_ext",
+  "address_contact_section",
+  "address_html",
+  "customer_address",
+  "address_display",
+  "column_break3",
+  "contact_html",
+  "contact_display",
+  "items_section",
+  "items",
+  "section_break_32",
+  "base_total",
+  "column_break_33",
+  "total",
+  "activities_tab",
+  "open_activities_html",
+  "all_activities_section",
+  "all_activities_html",
+  "notes_tab",
+  "notes_html",
+  "notes",
+  "dashboard_tab",
+  "tender_details_tab",
+  "tenderrfp_number",
+  "tender_notification_date",
+  "tender_submission_date",
+  "pre_bid_meeting_date",
+  "project_allotment_date",
+  "technical_bid_opening_date",
+  "tender_reference",
+  "expected_start_date",
+  "column_break_zqfs",
+  "jvconsortium",
+  "contract_type",
+  "invoicing_type",
+  "emd_exempted",
+  "earnest__money_deposit",
+  "tender_fees_exempted",
+  "tender_fees",
+  "expected_end_date",
+  "column_break_vhzt",
+  "project_duration",
+  "defect_liability_periodmonths",
+  "bid_validity_periodmonths",
+  "estimated_cost",
+  "performance_bond",
+  "location",
+  "bid_tab",
+  "scope_of_work",
+  "bid_evaluation_criteriatechnical",
+  "bid_evaluation_criteriacommerical",
+  "boqsor_tab",
+  "boq_details",
+  "documentsdeliverables_tab",
+  "list_of_deliverables",
+  "section_break_hmig",
+  "documents",
+  "corrigendum_tab",
+  "corriendum_details",
+  "confidential_documents_tab",
+  "confidential_documents_details",
+  "competitor_tab",
+  "competitor_details",
+  "pre_bid_checklist_tab",
+  "pre_bid_checklist_details",
+  "bid_submission_checklist_tab",
+  "bid_submission_checklist_details",
+  "post_bid_checklist_tab",
+  "post_bid_checklist_details",
+  "costing_sheet_tab",
+  "total_ctc",
+  "profit_on_ctc",
+  "profit_margin",
+  "contract_value",
+  "net_profit_margin",
+  "section_break_tasl",
+  "costing_sheet_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "Tender-.YYYY.-",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "opportunity_from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Opportunity From",
+   "oldfieldname": "enquiry_from",
+   "oldfieldtype": "Select",
+   "options": "DocType",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "party_name",
+   "fieldtype": "Dynamic Link",
+   "in_standard_filter": 1,
+   "label": "Party",
+   "oldfieldname": "customer",
+   "oldfieldtype": "Link",
+   "options": "opportunity_from",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_global_search": 1,
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Open\nQuotation\nConverted\nLost\nReplied\nClosed",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break0",
+   "fieldtype": "Column Break",
+   "oldfieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "opportunity_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Opportunity Type",
+   "oldfieldname": "enquiry_type",
+   "oldfieldtype": "Select",
+   "options": "Opportunity Type"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "oldfieldname": "source",
+   "oldfieldtype": "Select",
+   "options": "Lead Source"
+  },
+  {
+   "fieldname": "opportunity_owner",
+   "fieldtype": "Link",
+   "label": "Opportunity Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Prospecting",
+   "fieldname": "sales_stage",
+   "fieldtype": "Link",
+   "label": "Sales Stage",
+   "options": "Sales Stage"
+  },
+  {
+   "default": "100",
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "label": "Probability (%)"
+  },
+  {
+   "fieldname": "organization_details_section",
+   "fieldtype": "Section Break",
+   "label": "Organization"
+  },
+  {
+   "fieldname": "no_of_employees",
+   "fieldtype": "Select",
+   "label": "No of Employees",
+   "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue"
+  },
+  {
+   "depends_on": "eval:doc.opportunity_from=='Customer' && doc.party_name",
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "oldfieldname": "customer_group",
+   "oldfieldtype": "Link",
+   "options": "Customer Group",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "label": "Industry",
+   "options": "Industry Type"
+  },
+  {
+   "fieldname": "market_segment",
+   "fieldtype": "Link",
+   "label": "Market Segment",
+   "options": "Market Segment"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State/Province"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Opportunity Value"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opportunity_amount",
+   "fieldtype": "Currency",
+   "label": "Opportunity Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "base_opportunity_amount",
+   "fieldtype": "Currency",
+   "label": "Opportunity Amount (Company Currency)",
+   "options": "Company:company:default_currency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "more_info",
+   "fieldtype": "Section Break",
+   "label": "More Information",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-file-text"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "oldfieldname": "company",
+   "oldfieldtype": "Link",
+   "options": "Company",
+   "print_hide": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval: doc.source==\"Campaign\"",
+   "description": "Enter name of campaign if source of enquiry is campaign",
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "label": "Campaign",
+   "oldfieldname": "campaign",
+   "oldfieldtype": "Link",
+   "options": "Campaign"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Opportunity Date",
+   "no_copy": 1,
+   "oldfieldname": "transaction_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "width": "50px"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "oldfieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Print Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "oldfieldname": "amended_from",
+   "oldfieldtype": "Data",
+   "options": "Opportunity",
+   "print_hide": 1,
+   "read_only": 1,
+   "width": "150px"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "no_copy": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "first_response_time",
+   "fieldtype": "Duration",
+   "label": "First Response Time",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.status===\"Lost\"",
+   "fieldname": "lost_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Lost Reasons"
+  },
+  {
+   "depends_on": "eval:doc.status===\"Lost\"",
+   "fieldname": "lost_reasons",
+   "fieldtype": "Table MultiSelect",
+   "label": "Lost Reasons",
+   "options": "Opportunity Lost Reason Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_lost_reason",
+   "fieldtype": "Small Text",
+   "label": "Detailed Reason",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "competitors",
+   "fieldtype": "Table MultiSelect",
+   "label": "Competitors",
+   "options": "Competitor Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_info",
+   "fieldtype": "Tab Break",
+   "label": "Contacts",
+   "options": "fa fa-bullhorn"
+  },
+  {
+   "fieldname": "primary_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Primary Contact"
+  },
+  {
+   "depends_on": "eval:doc.party_name",
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "label": "Contact Person",
+   "options": "Contact",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contact_mobile",
+   "fieldtype": "Data",
+   "label": "Contact Mobile",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "whatsapp",
+   "fieldtype": "Data",
+   "label": "WhatsApp",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "phone_ext",
+   "fieldtype": "Data",
+   "label": "Phone Ext."
+  },
+  {
+   "fieldname": "address_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address & Contact"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML",
+   "label": "Address HTML"
+  },
+  {
+   "depends_on": "eval:doc.party_name",
+   "fieldname": "customer_address",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Customer / Lead Address",
+   "options": "Address",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "address_display",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Address",
+   "oldfieldname": "address",
+   "oldfieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "depends_on": "eval:doc.opportunity_from=='Customer' && doc.party_name",
+   "fieldname": "contact_display",
+   "fieldtype": "Small Text",
+   "in_global_search": 1,
+   "label": "Contact",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Tab Break",
+   "label": "Items",
+   "options": "fa fa-shopping-cart"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Opportunity Item"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "base_total",
+   "fieldtype": "Currency",
+   "label": "Total (Company Currency)",
+   "options": "Company:company:default_currency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "activities_tab",
+   "fieldtype": "Tab Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "open_activities_html",
+   "fieldtype": "HTML",
+   "label": "Open Activities HTML"
+  },
+  {
+   "fieldname": "all_activities_section",
+   "fieldtype": "Section Break",
+   "label": "All Activities"
+  },
+  {
+   "fieldname": "all_activities_html",
+   "fieldtype": "HTML",
+   "label": "All Activities HTML"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "notes_html",
+   "fieldtype": "HTML",
+   "label": "Notes HTML"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Notes",
+   "no_copy": 1,
+   "options": "CRM Note"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "dashboard_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "tender_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tender Details"
+  },
+  {
+   "fieldname": "tenderrfp_number",
+   "fieldtype": "Data",
+   "label": "Tender/RFP Number"
+  },
+  {
+   "fieldname": "tender_notification_date",
+   "fieldtype": "Date",
+   "label": "Tender Notification Date"
+  },
+  {
+   "fieldname": "tender_submission_date",
+   "fieldtype": "Date",
+   "label": "Tender Submission Date"
+  },
+  {
+   "fieldname": "pre_bid_meeting_date",
+   "fieldtype": "Date",
+   "label": "Pre Bid Meeting Date"
+  },
+  {
+   "fieldname": "project_allotment_date",
+   "fieldtype": "Date",
+   "label": "Project Allotment Date"
+  },
+  {
+   "fieldname": "technical_bid_opening_date",
+   "fieldtype": "Date",
+   "label": "Technical Bid Opening Date"
+  },
+  {
+   "fieldname": "tender_reference",
+   "fieldtype": "Data",
+   "label": "Tender Reference"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "column_break_zqfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jvconsortium",
+   "fieldtype": "Select",
+   "label": "JV/Consortium"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "label": "Contract Type",
+   "options": "Contract Type"
+  },
+  {
+   "fieldname": "invoicing_type",
+   "fieldtype": "Link",
+   "label": "Invoicing Type",
+   "options": "Invoicing Type"
+  },
+  {
+   "fieldname": "emd_exempted",
+   "fieldtype": "Select",
+   "label": "EMD Exempted",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.emd_exempted==\"No\"",
+   "fieldname": "earnest__money_deposit",
+   "fieldtype": "Float",
+   "label": "Earnest  Money Deposit"
+  },
+  {
+   "fieldname": "tender_fees_exempted",
+   "fieldtype": "Select",
+   "label": "Tender Fees Exempted",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.tender_fees_exempted==\"No\"",
+   "fieldname": "tender_fees",
+   "fieldtype": "Float",
+   "label": "Tender Fees"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "column_break_vhzt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_duration",
+   "fieldtype": "Float",
+   "label": "Project Duration"
+  },
+  {
+   "fieldname": "defect_liability_periodmonths",
+   "fieldtype": "Int",
+   "label": "Defect Liability Period(Months)"
+  },
+  {
+   "fieldname": "bid_validity_periodmonths",
+   "fieldtype": "Int",
+   "label": "Bid Validity Period(Months)"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Float",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "performance_bond",
+   "fieldtype": "Float",
+   "label": "Performance Bond(%)"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "bid_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bid"
+  },
+  {
+   "fieldname": "scope_of_work",
+   "fieldtype": "Data",
+   "label": "Scope Of Work"
+  },
+  {
+   "fieldname": "bid_evaluation_criteriatechnical",
+   "fieldtype": "Text",
+   "label": "Bid Evaluation Criteria(Technical)"
+  },
+  {
+   "fieldname": "bid_evaluation_criteriacommerical",
+   "fieldtype": "Text",
+   "label": "Bid Evaluation Criteria(Commerical)"
+  },
+  {
+   "fieldname": "boqsor_tab",
+   "fieldtype": "Tab Break",
+   "label": "BOQ/SOR"
+  },
+  {
+   "fieldname": "boq_details",
+   "fieldtype": "Table",
+   "label": "BOQ Details",
+   "options": "Tender Item"
+  },
+  {
+   "fieldname": "documentsdeliverables_tab",
+   "fieldtype": "Tab Break",
+   "label": "Documents/Deliverables"
+  },
+  {
+   "fieldname": "list_of_deliverables",
+   "fieldtype": "Table",
+   "label": "List Of Deliverables",
+   "options": "Deliverable Details"
+  },
+  {
+   "fieldname": "section_break_hmig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "options": "Tender Documents"
+  },
+  {
+   "fieldname": "corrigendum_tab",
+   "fieldtype": "Tab Break",
+   "label": "Corrigendum"
+  },
+  {
+   "fieldname": "corriendum_details",
+   "fieldtype": "Table",
+   "label": "Corriendum Details",
+   "options": "Tender Corrigendum"
+  },
+  {
+   "fieldname": "confidential_documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Confidential Documents"
+  },
+  {
+   "fieldname": "confidential_documents_details",
+   "fieldtype": "Table",
+   "label": "Confidential Documents Details",
+   "options": "Tender Confidential Documents"
+  },
+  {
+   "fieldname": "competitor_tab",
+   "fieldtype": "Tab Break",
+   "label": "Competitor"
+  },
+  {
+   "fieldname": "competitor_details",
+   "fieldtype": "Table",
+   "label": "Competitor Details",
+   "options": "Tender Competitor Details"
+  },
+  {
+   "fieldname": "pre_bid_checklist_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pre Bid Checklist"
+  },
+  {
+   "fieldname": "pre_bid_checklist_details",
+   "fieldtype": "Table",
+   "label": "Pre Bid Checklist Details",
+   "options": "Pre Bid Checklist Details"
+  },
+  {
+   "fieldname": "bid_submission_checklist_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bid Submission Checklist"
+  },
+  {
+   "fieldname": "bid_submission_checklist_details",
+   "fieldtype": "Table",
+   "label": "Bid Submission Checklist Details",
+   "options": "Bid Submission Checklist Details"
+  },
+  {
+   "fieldname": "post_bid_checklist_tab",
+   "fieldtype": "Tab Break",
+   "label": "Post Bid Checklist"
+  },
+  {
+   "fieldname": "post_bid_checklist_details",
+   "fieldtype": "Table",
+   "label": "Post Bid Checklist Details",
+   "options": "Post Bid Checklist Details"
+  },
+  {
+   "fieldname": "costing_sheet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Costing Sheet"
+  },
+  {
+   "fieldname": "total_ctc",
+   "fieldtype": "Currency",
+   "label": "Total CTC"
+  },
+  {
+   "fieldname": "profit_on_ctc",
+   "fieldtype": "Float",
+   "label": "Profit(%) on CTC"
+  },
+  {
+   "fieldname": "profit_margin",
+   "fieldtype": "Float",
+   "label": "Profit Margin",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Float",
+   "label": "Contract Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_profit_margin",
+   "fieldtype": "Float",
+   "label": "Net Profit(%) Margin ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tasl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "costing_sheet_details",
+   "fieldtype": "Table",
+   "label": "Costing Sheet Details",
+   "options": "Costing Sheet Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "icon": "fa fa-info-sign",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-30 01:35:30.352130",
+ "modified_by": "Administrator",
+ "module": "Tendering",
+ "name": "Tender",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Preliminary Approver",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Commercial Approver",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Top Management",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Business Head",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "status,transaction_date,party_name,opportunity_type,territory,company",
+ "sender_field": "contact_email",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "subject_field": "title",
+ "timeline_field": "party_name",
+ "title_field": "title",
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,58 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-29 19:49:26.602945",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-29 19:49:26.604280",
+  "name": "Review",
+  "workflow_action_name": "Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-30 00:43:03.894067",
+  "name": "Create Tender",
+  "workflow_action_name": "Create Tender"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-30 00:45:51.939306",
+  "name": "Mark Lost",
+  "workflow_action_name": "Mark Lost"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-30 00:46:07.935588",
+  "name": "Mark Won",
+  "workflow_action_name": "Mark Won"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-30 00:46:17.902534",
+  "name": "Allotment Received",
+  "workflow_action_name": "Allotment Received"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-30 00:46:32.152732",
+  "name": "Create Project",
+  "workflow_action_name": "Create Project"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-04-29 19:49:26.600508",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ }
+]

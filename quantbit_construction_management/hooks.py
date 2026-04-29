@@ -40,7 +40,19 @@ fixtures = [
 
     {
         "doctype": "UOM Conversion Rate"
-    }
+    },
+    {
+        "doctype": "Workflow Action Master"
+    },
+    {
+        "doctype": "Workflow State"
+    },
+    {
+        "doctype": "Workflow"
+    },
+    {
+        "doctype": "Role"
+    },
 
 ]
 
@@ -162,6 +174,12 @@ fixtures = [
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+	"Opportunity": {
+		"on_update": "quantbit_construction_management.tendering.custom_crm.opportunity.on_update",
+
+	}
+}
 
 # Scheduled Tasks
 # ---------------

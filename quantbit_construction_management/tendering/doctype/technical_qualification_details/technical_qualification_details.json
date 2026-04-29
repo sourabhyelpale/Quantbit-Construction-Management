@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-30 00:08:39.581440",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "description",
+  "comments",
+  "attachments",
+  "team_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Comments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "team_remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Team Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-30 00:08:39.581440",
+ "modified_by": "Administrator",
+ "module": "Tendering",
+ "name": "Technical Qualification Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
