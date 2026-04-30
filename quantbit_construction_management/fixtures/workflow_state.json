@@ -2,6 +2,24 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 15:52:51.582364",
+  "name": "Pending For Approval",
+  "style": "",
+  "workflow_state_name": "Pending For Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 15:50:14.275506",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "question-sign",
   "modified": "2026-04-29 19:49:26.573115",
   "name": "Pending",

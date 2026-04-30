@@ -53,7 +53,12 @@ fixtures = [
     {
         "doctype": "Role"
     },
-
+    {
+        "doctype": "Workspace",
+        "filters": [
+            ["name", "=", "Construction Management System"]
+        ]
+    }
 ]
 
 # Includes in <head>
