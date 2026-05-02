@@ -58,7 +58,13 @@ fixtures = [
         "filters": [
             ["name", "=", "Construction Management System"]
         ]
-    }
+    },
+    {
+        "doctype": "Workspace Link"
+    },
+    {
+        "doctype": "Workspace Shortcut"
+    },
 ]
 
 # Includes in <head>

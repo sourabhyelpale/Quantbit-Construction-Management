@@ -13,12 +13,19 @@ class SiteDiary(Document):
 		if not self.diary_no:
 			self.diary_no = self.generate_unique_diary_number()
 
+
 	def validate(self):
 		self.validate_unique_diary()
 		self.validate_project_date_range()
 		self.validate_stoppage_reason()
 		self.calculate_contract_day_number()
 		self.validate_temperature_range()
+
+		self.validate_manpower_log()
+		self.validate_equipment_log()
+		self.validate_material_deliveries_log()
+		self.validate_visitors_log()
+
 
 	def before_submit(self):
 		self.validate_future_date()
@@ -85,7 +92,7 @@ class SiteDiary(Document):
 			self.day_no_of_contract = (
 				getdate(self.site_date) - getdate(start_date)
 			).days + 1
-			
+
 
 	def validate_temperature_range(self):
 
@@ -94,7 +101,7 @@ class SiteDiary(Document):
 			if self.min_temp > self.max_temp:
 				frappe.throw("Min temperature cannot exceed max temperature")
 
-	
+
 	def generate_unique_diary_number(self):
 
 		while True:
@@ -108,3 +115,86 @@ class SiteDiary(Document):
 
 			if not exists:
 				return number
+
+
+	def validate_manpower_log(self):
+
+		if not self.manpower_log:
+			return
+
+		for row in self.manpower_log:
+
+			total_workers = (
+				(row.skilled or 0)
+				+ (row.unskilled or 0)
+				+ (row.supervisors or 0)
+			)
+
+			if total_workers <= 0:
+				frappe.throw(
+					f"Total manpower must be greater than zero in row {row.idx}"
+				)
+
+			total_hours = (
+				(row.hours_worked or 0)
+				+ (row.overtime_hours or 0)
+			)
+
+			if total_hours > 16:
+				frappe.throw(
+					f"Working hours + overtime cannot exceed 16 in row {row.idx}"
+				)
+
+
+	def validate_equipment_log(self):
+
+		if not self.equipment_log:
+			return
+
+		for row in self.equipment_log:
+
+			if row.working_hours and row.working_hours < 0:
+				frappe.throw(
+					f"Equipment hours cannot be negative in row {row.idx}"
+				)
+
+			if row.working_hours and row.working_hours > 24:
+				frappe.throw(
+					f"Equipment hours cannot exceed 24 in row {row.idx}"
+				)
+
+
+	def validate_material_deliveries_log(self):
+
+		if not self.material_deliveries:
+			return
+
+		for row in self.material_deliveries:
+
+			if not row.item:
+				frappe.throw(
+					f"Material must be selected in row {row.idx}"
+				)
+
+			if row.quantity <= 0:
+				frappe.throw(
+					f"Material quantity must be greater than zero in row {row.idx}"
+				)
+
+
+	def validate_visitors_log(self):
+
+		if not self.visitors:
+			return
+
+		for row in self.visitors:
+
+			if not row.visitor_name:
+				frappe.throw(
+					f"Visitor name required in row {row.idx}"
+				)
+
+			if not row.purpose:
+				frappe.throw(
+					f"Visitor purpose required in row {row.idx}"
+				)

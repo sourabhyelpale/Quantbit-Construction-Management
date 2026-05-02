@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:gang_code",
+ "creation": "2026-05-02 10:58:21.304932",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "project",
+  "gang_code",
+  "gang_name",
+  "col_break_ident1",
+  "gang_leader",
+  "subcontractor",
+  "trade",
+  "col_break_ident2",
+  "size",
+  "status",
+  "section_gang_members",
+  "members"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Mandatory\ndefault Active",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gang_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gang Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gang_name",
+   "fieldtype": "Data",
+   "label": "Gang Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gang_leader",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gang Leader",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subcontractor",
+   "fieldtype": "Link",
+   "label": "Subcontractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "trade",
+   "fieldtype": "Select",
+   "label": "Primary Trade",
+   "options": "default General"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Int",
+   "label": "Gang Size"
+  },
+  {
+   "fieldname": "section_gang_members",
+   "fieldtype": "Section Break",
+   "label": "Gang Members"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Gang Members",
+   "options": "Gang Member"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-02 11:12:18.823696",
+ "modified_by": "Administrator",
+ "module": "Labour Management",
+ "name": "Gang",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,40 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:drawing_no",
+ "autoname": "naming_series:naming_series",
  "creation": "2026-04-30 12:40:17.394459",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series_section",
-  "status",
   "section_identity",
-  "project",
-  "drawing_type",
   "drawing_no",
-  "col_break_ident1",
+  "project",
   "title",
+  "naming_series",
+  "col_break_ident1",
   "discipline",
+  "drawing_type",
   "current_rev",
   "col_break_ident2",
   "drawn_by",
   "checked_by",
   "issue_date",
+  "status",
   "section_attachments",
   "file",
   "column_break_vkeo",
   "qr_code",
+  "section_break_vrzw",
+  "revisions",
   "section_notes",
   "notes"
  ],
  "fields": [
   {
+   "default": "Under Review",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Issued for Construction\nUnder Review\nApproved\nApproved with Comments\nRejected\nSuperseded\nRevised",
+   "options": "\nIssued for Construction\nUnder Review\nApproved\nApproved with Comments\nRejected\nSuperseded\nRevised",
    "reqd": 1
   },
   {
@@ -51,10 +54,11 @@
    "reqd": 1
   },
   {
+   "default": "Construction",
    "fieldname": "drawing_type",
    "fieldtype": "Select",
    "label": "Drawing Type",
-   "options": "Construction\nShop Drawing\nAs-Built\nConceptual\nDetail\nLayout\nSection\nElevation",
+   "options": "\nConstruction\nShop Drawing\nAs-Built\nConceptual\nDetail\nLayout\nSection\nElevation",
    "reqd": 1
   },
   {
@@ -62,7 +66,6 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Drawing Number",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -76,13 +79,15 @@
    "reqd": 1
   },
   {
+   "default": "Civil",
    "fieldname": "discipline",
    "fieldtype": "Select",
    "label": "Discipline",
-   "options": "Civil\nStructural\nArchitectural\nMechanical\nElectrical\nPlumbing\nFirefighting\nLandscape\nSurvey",
+   "options": "\nCivil\nStructural\nArchitectural\nMechanical\nElectrical\nPlumbing\nFirefighting\nLandscape\nSurvey",
    "reqd": 1
   },
   {
+   "default": "A",
    "fieldname": "current_rev",
    "fieldtype": "Data",
    "label": "Current Revision"
@@ -135,24 +140,35 @@
    "label": "Notes"
   },
   {
-   "collapsible": 1,
-   "fieldname": "naming_series_section",
-   "fieldtype": "Section Break",
-   "label": "Naming Series"
-  },
-  {
    "fieldname": "column_break_vkeo",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vrzw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "revisions",
+   "fieldtype": "Table",
+   "label": "Revision History",
+   "options": "Drawing Revision"
+  },
+  {
+   "default": "DRG-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DRG-.YYYY.-"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-30 14:45:20.272979",
+ "modified": "2026-05-02 15:44:02.124829",
  "modified_by": "Administrator",
  "module": "Document Control",
  "name": "Drawing Register",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -182,5 +198,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "title",
  "track_changes": 1
 }

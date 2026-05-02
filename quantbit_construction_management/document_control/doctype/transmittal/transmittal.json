@@ -7,20 +7,24 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "column_break_gzyz",
-  "status",
   "section_identity",
+  "transmittal_no",
   "project",
-  "from_company",
+  "naming_series",
   "col_break_ident1",
+  "from_company",
   "to_party",
   "to_email",
   "col_break_ident2",
-  "purpose",
-  "response_required",
   "date",
+  "purpose",
+  "section_break_fbsf",
+  "drawings",
+  "section_break_actn",
   "response_due",
+  "response_required",
+  "column_break_uhsp",
+  "status",
   "section_attachments",
   "acknowledgement",
   "amended_from"
@@ -36,6 +40,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Draft\nSent\nAcknowledged\nReplied\nOverdue",
    "reqd": 1
@@ -49,6 +54,7 @@
    "fieldname": "project",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
    "reqd": 1
@@ -81,10 +87,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "For Approval",
    "fieldname": "purpose",
    "fieldtype": "Select",
    "label": "Purpose",
-   "options": "For Approval\nFor Comment\nFor Information\nFor Construction\nAs Built",
+   "options": "\nFor Approval\nFor Comment\nFor Information\nFor Construction\nAs Built",
    "reqd": 1
   },
   {
@@ -97,6 +104,7 @@
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Transmittal Date",
    "reqd": 1
   },
@@ -126,7 +134,27 @@
    "search_index": 1
   },
   {
-   "fieldname": "column_break_gzyz",
+   "fieldname": "transmittal_no",
+   "fieldtype": "Data",
+   "label": "Transmittal No.",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_fbsf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "drawings",
+   "fieldtype": "Table",
+   "label": "Drawings Included",
+   "options": "Transmittal Drawing"
+  },
+  {
+   "fieldname": "section_break_actn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uhsp",
    "fieldtype": "Column Break"
   }
  ],
@@ -134,7 +162,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-30 14:48:06.022540",
+ "modified": "2026-05-02 15:47:59.608133",
  "modified_by": "Administrator",
  "module": "Document Control",
  "name": "Transmittal",

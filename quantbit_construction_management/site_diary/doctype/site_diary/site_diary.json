@@ -46,7 +46,8 @@
   {
    "fieldname": "diary_no",
    "fieldtype": "Data",
-   "label": "Diary No."
+   "label": "Diary No.",
+   "read_only": 1
   },
   {
    "fieldname": "project",
@@ -129,12 +130,14 @@
   {
    "fieldname": "max_temp",
    "fieldtype": "Float",
-   "label": "Max Temp"
+   "label": "Max Temp",
+   "placeholder": "`C"
   },
   {
    "fieldname": "min_temp",
    "fieldtype": "Float",
-   "label": "Min Temp"
+   "label": "Min Temp",
+   "placeholder": "`C"
   },
   {
    "fieldname": "wind_speed_kmh",
@@ -224,11 +227,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-29 17:40:45.830311",
+ "modified": "2026-05-02 16:06:48.006007",
  "modified_by": "Administrator",
  "module": "Site Diary",
  "name": "Site Diary",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

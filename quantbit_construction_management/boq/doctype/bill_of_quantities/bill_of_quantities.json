@@ -7,23 +7,23 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status",
   "section_identity",
   "project",
   "currency",
-  "col_break_ident1",
-  "contract_type",
   "boq_no",
-  "col_break_ident2",
+  "contract_type",
+  "col_break_ident1",
+  "status",
   "title",
   "version",
-  "amendment_reason",
-  "section_financial",
   "contract_value",
+  "col_break_ident2",
+  "amendment_reason",
   "section_boq_items",
   "boq_items",
   "section_approval",
   "approved_by",
+  "column_break_yvxq",
   "approved_date",
   "section_notes",
   "notes",
@@ -59,8 +59,7 @@
   },
   {
    "fieldname": "col_break_ident1",
-   "fieldtype": "Column Break",
-   "label": "Col Break Ident1"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "contract_type",
@@ -77,8 +76,7 @@
   },
   {
    "fieldname": "col_break_ident2",
-   "fieldtype": "Column Break",
-   "label": "Col Break Ident2"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "title",
@@ -95,11 +93,6 @@
    "fieldname": "amendment_reason",
    "fieldtype": "Text",
    "label": "Amendment Reason"
-  },
-  {
-   "fieldname": "section_financial",
-   "fieldtype": "Section Break",
-   "label": "Financial Summary (Auto-computed)"
   },
   {
    "fieldname": "contract_value",
@@ -153,13 +146,17 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_yvxq",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-30 14:25:47.444884",
+ "modified": "2026-04-30 16:58:53.328122",
  "modified_by": "Administrator",
  "module": "BOQ",
  "name": "Bill of Quantities",

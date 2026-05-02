@@ -8,409 +8,256 @@
    {
     "conversion_factor": "25.4",
     "conversion_uom": "Milimeter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Inch"
    },
    {
     "conversion_factor": "2.54",
     "conversion_uom": "Centimeter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Inch"
    },
    {
     "conversion_factor": "12",
     "conversion_uom": "Inch",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Foot"
    },
    {
     "conversion_factor": "0.3048",
     "conversion_uom": "Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Foot"
    },
    {
     "conversion_factor": "3",
     "conversion_uom": "Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Yard"
    },
    {
     "conversion_factor": "0.9144",
     "conversion_uom": "Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Yard"
    },
    {
     "conversion_factor": "3.2808",
     "conversion_uom": "Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Meter"
    },
    {
     "conversion_factor": "39.37",
     "conversion_uom": "Inch",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Meter"
    },
    {
     "conversion_factor": "1000",
     "conversion_uom": "Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Kilometer"
    },
    {
     "conversion_factor": "0.6214",
     "conversion_uom": "Mile",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Kilometer"
    },
    {
     "conversion_factor": "1.6093",
     "conversion_uom": "Kilometer",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Mile"
    },
    {
     "conversion_factor": "5280",
     "conversion_uom": "Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Mile"
    },
    {
     "conversion_factor": "645.16",
     "conversion_uom": "Square Milimeter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Inch"
    },
    {
     "conversion_factor": "6.45",
     "conversion_uom": "Square Centimeter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Inch"
    },
    {
     "conversion_factor": "144",
     "conversion_uom": "Square Inch",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Foot"
    },
    {
     "conversion_factor": "0.0929",
     "conversion_uom": "Square Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Foot"
    },
    {
     "conversion_factor": "9",
     "conversion_uom": "Square Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Yard"
    },
    {
     "conversion_factor": "0.8361",
     "conversion_uom": "Square Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Yard"
    },
    {
     "conversion_factor": "10.7639",
     "conversion_uom": "Square Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Meter"
    },
    {
     "conversion_factor": "1.196",
     "conversion_uom": "Square Yard",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Square Meter"
    },
    {
     "conversion_factor": "43560",
     "conversion_uom": "Square Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Acre"
    },
    {
     "conversion_factor": "4046.86",
     "conversion_uom": "Square Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Acre"
    },
    {
     "conversion_factor": "0.4047",
     "conversion_uom": "Hectare",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Acre"
    },
    {
     "conversion_factor": "10000",
     "conversion_uom": "Square Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Hectare"
    },
    {
     "conversion_factor": "2.471",
     "conversion_uom": "Acre",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Hectare"
    },
    {
     "conversion_factor": "1728",
     "conversion_uom": "Cubic Inch",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Foot"
    },
    {
     "conversion_factor": "0.0283",
     "conversion_uom": "Cubic Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Foot"
    },
    {
     "conversion_factor": "27",
     "conversion_uom": "Cubic Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Yard"
    },
    {
     "conversion_factor": "0.7646",
     "conversion_uom": "Cubic Meter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Yard"
    },
    {
     "conversion_factor": "35.315",
     "conversion_uom": "Cubic Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Meter"
    },
    {
     "conversion_factor": "1.308",
     "conversion_uom": "Cubic Yard",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Meter"
    },
    {
     "conversion_factor": "1000",
     "conversion_uom": "Litre",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Meter"
    },
    {
     "conversion_factor": "264.17",
     "conversion_uom": "Grain/Gallon (US)",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cubic Meter"
    },
    {
     "conversion_factor": "0.0353",
     "conversion_uom": "Cubic Foot",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Liter"
    },
    {
     "conversion_factor": "0.264",
     "conversion_uom": "Grain/Gallon (US)",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Liter"
    },
    {
     "conversion_factor": "3.785",
     "conversion_uom": "Liter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Grain/Gallon (US)"
    },
    {
     "conversion_factor": "0.4536",
     "conversion_uom": "Kg",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Pound"
    },
    {
     "conversion_factor": "2.2046",
     "conversion_uom": "Pound",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Kg"
    },
    {
     "conversion_factor": "1000",
     "conversion_uom": "Kg",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Metric Tonne"
    },
    {
     "conversion_factor": "2204.6",
     "conversion_uom": "Pound",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Metric Tonne"
    },
    {
     "conversion_factor": "2000",
     "conversion_uom": "Pound",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "US Ton"
    },
    {
     "conversion_factor": "907.18",
     "conversion_uom": "Kg",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "US Ton"
    },
    {
     "conversion_factor": "50",
     "conversion_uom": "Kg",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cement Bag"
    },
    {
     "conversion_factor": "110.23",
     "conversion_uom": "Pound",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Cement Bag"
    },
    {
     "conversion_factor": "6.8948",
     "conversion_uom": "kPa",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "psi"
    },
    {
     "conversion_factor": "0.0703",
     "conversion_uom": "Kilogram/Square Centimeter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "psi"
    },
    {
     "conversion_factor": "14.223",
     "conversion_uom": "psi",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Kilogram/Square Centimeter"
    },
    {
     "conversion_factor": "10",
     "conversion_uom": "Kilogram/Square Centimeter",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Mpa"
    },
    {
     "conversion_factor": "145.038",
     "conversion_uom": "psi",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Mpa"
    },
    {
     "conversion_factor": "100",
     "conversion_uom": "kPa",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Bar"
    },
    {
     "conversion_factor": "14.5",
     "conversion_uom": "psi",
-    "parent": "UOM Conversion Rate",
-    "parentfield": "uom_conversion_table",
-    "parenttype": "UOM Conversion Rate",
     "uom": "Bar"
    }
   ]

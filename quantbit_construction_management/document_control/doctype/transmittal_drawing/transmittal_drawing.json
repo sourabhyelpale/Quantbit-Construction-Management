@@ -31,6 +31,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "drawing.current_rev",
    "fieldname": "revision",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -51,7 +52,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-04-30 14:49:10.744248",
+ "modified": "2026-05-02 14:27:31.757643",
  "modified_by": "Administrator",
  "module": "Document Control",
  "name": "Transmittal Drawing",

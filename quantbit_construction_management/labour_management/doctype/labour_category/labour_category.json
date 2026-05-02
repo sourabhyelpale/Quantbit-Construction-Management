@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:category_code",
+ "creation": "2026-05-02 10:56:11.474640",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "category_code",
+  "category_name",
+  "col_break_ident1",
+  "trade",
+  "skill_level",
+  "is_active",
+  "col_break_ident2",
+  "standard_rate",
+  "overtime_rate",
+  "cost_code"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Skilled",
+   "fieldname": "skill_level",
+   "fieldtype": "Select",
+   "label": "Skill Level",
+   "options": "\nSkilled\nSemi-Skilled\nUnskilled\nSupervisor\nForeman\nGang\nLeader"
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category_name",
+   "fieldtype": "Data",
+   "label": "Category Name",
+   "reqd": 1
+  },
+  {
+   "default": "General Labour",
+   "fieldname": "trade",
+   "fieldtype": "Select",
+   "label": "Trade",
+   "options": "\nMasonry\nCarpentry\nSteel Fixing\nConcrete\nExcavation\nPainting\nPlumbing\nElectrical\nWelding\nRoofing\nGeneral Labour\nSupervisory Other"
+  },
+  {
+   "fieldname": "cost_code",
+   "fieldtype": "Data",
+   "label": "Cost Code"
+  },
+  {
+   "default": "0",
+   "fieldname": "standard_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Standard Daily Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "overtime_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Overtime Rate"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-02 11:34:36.898937",
+ "modified_by": "Administrator",
+ "module": "Labour Management",
+ "name": "Labour Category",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

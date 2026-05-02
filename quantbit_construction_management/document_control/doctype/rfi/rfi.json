@@ -7,31 +7,37 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "column_break_tlpt",
-  "status",
   "section_identity",
-  "project",
-  "priority",
+  "rfi_number",
   "subject",
-  "raised_by",
+  "naming_series",
   "col_break_ident1",
-  "discipline",
-  "related_drawing",
-  "directed_to",
-  "response_by",
+  "project",
+  "raised_by",
+  "raised_date",
   "col_break_ident2",
+  "related_drawing",
+  "discipline",
+  "section_notes",
+  "query",
+  "attachments",
+  "section_break_tgxd",
+  "directed_to",
+  "column_break_sgoz",
+  "priority",
+  "column_break_buak",
+  "required_by",
+  "section_attachments",
+  "response",
+  "section_break_hiyh",
+  "response_date",
+  "response_by",
+  "status",
+  "column_break_hjsx",
   "impact_on_cost",
   "linked_vo",
   "impact_on_time",
-  "raised_date",
-  "required_by",
-  "response_date",
-  "section_attachments",
-  "attachments",
-  "section_notes",
-  "query",
-  "response",
+  "section_break_weer",
   "amended_from"
  ],
  "fields": [
@@ -42,17 +48,17 @@
    "options": "R-.YYYY.-"
   },
   {
+   "default": "Open",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Mandatory\ndefault Open",
+   "options": "\nOpen\nResponded\nClosed\nDisputed\nWithdrawn",
    "reqd": 1
   },
   {
    "fieldname": "section_identity",
-   "fieldtype": "Section Break",
-   "label": "Details"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "project",
@@ -63,10 +69,11 @@
    "reqd": 1
   },
   {
+   "default": "Normal",
    "fieldname": "priority",
    "fieldtype": "Select",
    "label": "Priority",
-   "options": "Mandatory\ndefault Normal"
+   "options": "\nLow\nNormal\nHigh\nUrgent"
   },
   {
    "fieldname": "subject",
@@ -87,10 +94,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Architectural",
    "fieldname": "discipline",
    "fieldtype": "Select",
    "label": "Discipline",
-   "options": "Mandatory\ndefault Architectural"
+   "options": "\nCivil\nStructural\nArchitectural\nMechanical\nElectrical\nPlumbing\nFirefighting"
   },
   {
    "fieldname": "related_drawing",
@@ -99,10 +107,11 @@
    "options": "Drawing Register"
   },
   {
+   "default": "Architect",
    "fieldname": "directed_to",
    "fieldtype": "Select",
    "label": "Directed To",
-   "options": "Mandatory\ndefault Architect"
+   "options": "\nArchitect\nStructural\nEngineer\nMEP Engineer\nClient\nConsultant"
   },
   {
    "fieldname": "response_by",
@@ -132,6 +141,7 @@
    "label": "Time Impact"
   },
   {
+   "default": "Today",
    "fieldname": "raised_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -150,8 +160,7 @@
   },
   {
    "fieldname": "section_attachments",
-   "fieldtype": "Section Break",
-   "label": "Attachments"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "attachments",
@@ -160,8 +169,7 @@
   },
   {
    "fieldname": "section_notes",
-   "fieldtype": "Section Break",
-   "label": "Notes & Justification"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "query",
@@ -185,15 +193,41 @@
    "search_index": 1
   },
   {
-   "fieldname": "column_break_tlpt",
+   "fieldname": "rfi_number",
+   "fieldtype": "Data",
+   "label": "RFI Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_tgxd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sgoz",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_buak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hiyh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hjsx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_weer",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-30 14:45:56.190765",
+ "modified": "2026-05-02 15:47:03.973316",
  "modified_by": "Administrator",
  "module": "Document Control",
  "name": "RFI",

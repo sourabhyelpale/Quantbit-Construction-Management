@@ -1,32 +1,29 @@
-// Copyright (c) 2026, QTPL and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on("Manpower Log", {
 
-    skilled(frm, cdt, cdn) {
-        calculate_total(cdt, cdn);
+    skilled: function(frm, cdt, cdn) {
+        calculate_total(frm, cdt, cdn);
     },
 
-    unskilled(frm, cdt, cdn) {
-        calculate_total(cdt, cdn);
+    unskilled: function(frm, cdt, cdn) {
+        calculate_total(frm, cdt, cdn);
     },
 
-    supervisors(frm, cdt, cdn) {
-        calculate_total(cdt, cdn);
+    supervisors: function(frm, cdt, cdn) {
+        calculate_total(frm, cdt, cdn);
     },
 
-    hours_worked(frm, cdt, cdn) {
-        validate_hours(cdt, cdn);
+    hours_worked: function(frm, cdt, cdn) {
+        validate_hours(frm, cdt, cdn);
     },
 
-    overtime_hours(frm, cdt, cdn) {
-        validate_hours(cdt, cdn);
+    overtime_hours: function(frm, cdt, cdn) {
+        validate_hours(frm, cdt, cdn);
     }
 
 });
 
 
-function calculate_total(cdt, cdn) {
+function calculate_total(frm, cdt, cdn) {
 
     let row = locals[cdt][cdn];
 
@@ -36,10 +33,12 @@ function calculate_total(cdt, cdn) {
         (row.supervisors || 0);
 
     frappe.model.set_value(cdt, cdn, "total", total);
+
+    update_parent_total(frm);
 }
 
 
-function validate_hours(cdt, cdn) {
+function validate_hours(frm, cdt, cdn) {
 
     let row = locals[cdt][cdn];
 
@@ -47,12 +46,13 @@ function validate_hours(cdt, cdn) {
         (row.hours_worked || 0) +
         (row.overtime_hours || 0);
 
-    if (total_hours < 0 || total_hours > 16) {
+    if (total_hours > 16) {
 
         frappe.msgprint(
             "Working Hours + Overtime Hours must be between 0 and 16"
         );
 
+        frappe.model.set_value(cdt, cdn, "hours_worked", 8);
         frappe.model.set_value(cdt, cdn, "overtime_hours", 0);
     }
 }
