@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:entry_no",
+ "creation": "2026-05-02 11:06:26.102778",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "entry_no",
+  "project",
+  "col_break_ident1",
+  "gang",
+  "shift",
+  "col_break_ident2",
+  "date",
+  "section_break_moev",
+  "attendance",
+  "section_financial",
+  "total_present",
+  "col_break_fin1",
+  "total_absent",
+  "column_break_nphu",
+  "total_hours",
+  "section_notes",
+  "site_engineer",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entry_no",
+   "fieldtype": "Data",
+   "label": "Entry No",
+   "unique": 1
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gang",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gang",
+   "options": "Gang",
+   "reqd": 1
+  },
+  {
+   "default": "Day",
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "\nDay\nNight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_engineer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Verified By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_financial",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_present",
+   "fieldtype": "Int",
+   "label": "Total Present"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_absent",
+   "fieldtype": "Int",
+   "label": "Total Absent"
+  },
+  {
+   "fieldname": "col_break_fin1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_hours",
+   "fieldtype": "Float",
+   "label": "Total Man Hours"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes & Justification"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Labour Attendance Bulk Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_moev",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Table",
+   "label": "Attendance",
+   "options": "Labour Attendance Row",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nphu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-02 11:20:58.253331",
+ "modified_by": "Administrator",
+ "module": "Labour Management",
+ "name": "Labour Attendance Bulk Entry",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
