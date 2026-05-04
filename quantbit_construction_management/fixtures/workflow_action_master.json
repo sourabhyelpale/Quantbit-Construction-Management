@@ -9,13 +9,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-04-29 19:49:26.604280",
-  "name": "Review",
-  "workflow_action_name": "Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
   "modified": "2026-04-30 00:43:03.894067",
   "name": "Create Tender",
   "workflow_action_name": "Create Tender"
@@ -51,15 +44,71 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-04-29 19:49:26.600508",
-  "name": "Approve",
-  "workflow_action_name": "Approve"
+  "modified": "2026-05-04 13:11:03.949197",
+  "name": "Pending Approval From Analyzer",
+  "workflow_action_name": "Pending Approval From Analyzer"
  },
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2026-01-30 15:54:20.500775",
-  "name": "Send For Approval",
-  "workflow_action_name": "Send For Approval"
+  "modified": "2026-05-04 13:11:11.439979",
+  "name": "Pending Approval From Technical Evaluator",
+  "workflow_action_name": "Pending Approval From Technical Evaluator"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:11:19.101597",
+  "name": "Pending approval from Financial Evaluator",
+  "workflow_action_name": "Pending approval from Financial Evaluator"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:11:29.577836",
+  "name": "Pending Approval From Sales Evaluator",
+  "workflow_action_name": "Pending Approval From Sales Evaluator"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:11:39.210787",
+  "name": "Pending Approval From Top Management",
+  "workflow_action_name": "Pending Approval From Top Management"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:11:46.870578",
+  "name": "Pending Approval From Business Developer",
+  "workflow_action_name": "Pending Approval From Business Developer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:12:24.527403",
+  "name": "Pending For Preliminary Approval",
+  "workflow_action_name": "Pending For Preliminary Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:12:34.206053",
+  "name": "Pending For Commercial Approval",
+  "workflow_action_name": "Pending For Commercial Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:12:40.637593",
+  "name": "Pending For Top Management Approval",
+  "workflow_action_name": "Pending For Top Management Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-05-04 13:12:47.207987",
+  "name": "Submit Tender",
+  "workflow_action_name": "Submit Tender"
  }
 ]

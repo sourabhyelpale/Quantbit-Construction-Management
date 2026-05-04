@@ -19,7 +19,6 @@
   "status",
   "column_break0",
   "opportunity_type",
-  "source",
   "opportunity_owner",
   "column_break_10",
   "sales_stage",
@@ -222,14 +221,6 @@
    "options": "Opportunity Type"
   },
   {
-   "fieldname": "source",
-   "fieldtype": "Link",
-   "label": "Source",
-   "oldfieldname": "source",
-   "oldfieldtype": "Select",
-   "options": "Lead Source"
-  },
-  {
    "fieldname": "opportunity_owner",
    "fieldtype": "Link",
    "label": "Opportunity Owner",
@@ -427,7 +418,7 @@
    "no_copy": 1,
    "oldfieldname": "amended_from",
    "oldfieldtype": "Data",
-   "options": "Opportunity",
+   "options": "Tender",
    "print_hide": 1,
    "read_only": 1,
    "width": "150px"
@@ -964,7 +955,7 @@
  "icon": "fa fa-info-sign",
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-30 01:35:30.352130",
+ "modified": "2026-05-04 13:21:16.562989",
  "modified_by": "Administrator",
  "module": "Tendering",
  "name": "Tender",

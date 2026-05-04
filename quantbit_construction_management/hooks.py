@@ -65,6 +65,72 @@ fixtures = [
     {
         "doctype": "Workspace Shortcut"
     },
+      {
+        "dt":"Workflow State" , "filters":
+        [
+            [
+                "name", "in", [
+                    "Approved By Analyzer",
+                    "Approved By Technical Evaluator",
+                    "Approved By Financial Evaluator",
+                    "Approved By Sales",
+                    "Approved By Top Management",
+                    "Go For Bid",
+                    "Don't Go For Bid",
+                    "Tender created",
+                    "Preliminary Approved",
+                    "Commercially Approved",
+                    "Top Management Approved",
+                    "Won",
+                    "Lost",
+                    "Alloted",
+                    "Project Created",
+                    "New",
+                    "Tender Submitted",
+                    "In Progress",
+                ]
+            ]
+        ]
+    },
+    {
+        "dt":"Workflow Action Master" , "filters":
+        [
+            [
+                "name", "in", [
+                    "Pending Approval From Analyzer",
+                    "Pending Approval From Technical Evaluator",
+                    "Pending approval from Financial Evaluator",
+                    "Pending Approval From Sales Evaluator",
+                    "Pending Approval From Top Management",
+                    "Pending Approval From Business Head",
+                    "Pending Approval From Business Developer",
+                    "Pending For Preliminary Approval",
+                    "Pending For Commercial Approval",
+                    "Pending For Top Management Approval",
+                    "Submit Tender",
+                    "Pending",
+                    "Create Tender",
+                    "Reject",
+                    "Mark Won",
+                    "Mark Lost",
+                    "Allotment Received",
+                    "Create Project"
+
+                ]
+            ]
+        ]
+    },
+        {
+        "dt":"Workflow" , "filters":
+        [
+            [
+                "name", "in", [
+                    "Tender Submission",
+                    "Tender Creation",
+                ]
+            ]
+        ]
+    },
 ]
 
 # Includes in <head>
