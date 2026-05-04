@@ -8,8 +8,8 @@
  "field_order": [
   "section_identity",
   "item_type",
-  "item_no",
   "item_code",
+  "item_no",
   "col_break_ident1",
   "unit",
   "quantity",
@@ -40,14 +40,15 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Item Type",
-   "options": "Mandatory\ndefault Material"
+   "options": "Material\nLabour\nEquipment\nSubcontract\nProvisional Sum\nPrelim & General Allowance"
   },
   {
    "columns": 1,
+   "fetch_from": "item_code.item_name",
    "fieldname": "item_no",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Item No",
+   "label": "Item Name",
    "reqd": 1,
    "unique": 1
   },
@@ -167,7 +168,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-04-30 14:52:13.262004",
+ "modified": "2026-05-04 11:12:38.080008",
  "modified_by": "Administrator",
  "module": "BOQ",
  "name": "BOQ Item",

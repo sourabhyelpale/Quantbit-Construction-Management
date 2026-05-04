@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:SBI-.YYYY.-",
+ "creation": "2026-05-04 10:39:23.103362",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_identity",
+  "item",
+  "col_break_ident1",
+  "qty",
+  "section_financial",
+  "rate",
+  "col_break_fin1",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SBI-.YYYY.-"
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "label": "Item"
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Ident1"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "section_financial",
+   "fieldtype": "Section Break",
+   "label": "Financial Summary (Auto-computed)"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "col_break_fin1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Fin1"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-05-04 10:39:30.158119",
+ "modified_by": "Administrator",
+ "module": "Subcontractor Management",
+ "name": "SC Bill Item",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

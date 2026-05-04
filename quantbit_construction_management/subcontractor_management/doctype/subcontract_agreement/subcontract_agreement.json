@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-04 10:45:24.743163",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "sca_no",
+  "title",
+  "project",
+  "main_contract",
+  "subcontractor",
+  "column_break_gjbv",
+  "scope_of_work",
+  "contract_type",
+  "sc_value",
+  "currency",
+  "col_break_ident2",
+  "start_date",
+  "end_date",
+  "retention_pct",
+  "advance_pct",
+  "payment_terms",
+  "column_break_savi",
+  "insurance_expiry",
+  "signed_copy",
+  "status",
+  "naming_series",
+  "section_boq_items",
+  "boq_items",
+  "section_attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nSuspended\nCompleted\nTerminated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Lump Sum\nRemeasurement\nLabour Only\nSupply & Install\nLabour & Materials"
+  },
+  {
+   "fieldname": "sca_no",
+   "fieldtype": "Data",
+   "label": "Subcontract No.",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "main_contract",
+   "fieldtype": "Data",
+   "label": "Main Contract"
+  },
+  {
+   "fieldname": "subcontractor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subcontractor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scope_of_work",
+   "fieldtype": "Text",
+   "label": "Scope Of Work",
+   "max_height": "100px",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5",
+   "fieldname": "retention_pct",
+   "fieldtype": "Percent",
+   "label": "Retention %"
+  },
+  {
+   "default": "0",
+   "fieldname": "advance_pct",
+   "fieldtype": "Percent",
+   "label": "Advance %"
+  },
+  {
+   "default": "45 Days",
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": "Payment Terms",
+   "options": "\n30 Days\n45 Days\n60 Days\nOn Certification\nOn Measurement"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance_expiry",
+   "fieldtype": "Date",
+   "label": "Sc Insurance Expiry"
+  },
+  {
+   "fieldname": "sc_value",
+   "fieldtype": "Currency",
+   "label": "Subcontract Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_boq_items",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "boq_items",
+   "fieldtype": "Table",
+   "label": "BOQ Items",
+   "options": "BOQ Item"
+  },
+  {
+   "fieldname": "section_attachments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signed_copy",
+   "fieldtype": "Attach",
+   "label": "Signed Agreement"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subcontract Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_gjbv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_savi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "SCA-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SCA-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-04 12:38:15.541542",
+ "modified_by": "Administrator",
+ "module": "Subcontractor Management",
+ "name": "Subcontract Agreement",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

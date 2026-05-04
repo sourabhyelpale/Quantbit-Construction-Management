@@ -6,16 +6,13 @@ frappe.ui.form.on("Daily Progress Tracking", {
 
 	setup(frm) {
 
-		frm.set_query("task", "task_template", function () {
+		frm.set_query("task", "task_template", function (doc, cdt, cdn) {
 
 			return {
-
 				filters: {
-
-					status: "Template"
-
+					status: "Template",
+					project: doc.project
 				}
-
 			};
 
 		});

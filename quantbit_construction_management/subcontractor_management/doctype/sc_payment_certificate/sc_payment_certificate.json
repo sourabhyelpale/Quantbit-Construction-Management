@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-04 10:48:12.887840",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "cert_no",
+  "subcontract",
+  "sc_bill",
+  "project",
+  "col_break_ident1",
+  "subcontractor",
+  "cert_date",
+  "certified_amount",
+  "net_payable",
+  "col_break_ident2",
+  "certified_by",
+  "payment_due_date",
+  "purchase_invoice",
+  "naming_series",
+  "column_break_glnn",
+  "status",
+  "remarks",
+  "section_break_xgqp",
+  "deduction",
+  "section_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nIssued\nPaid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cert_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Certificate No",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Data",
+   "label": "Subcontract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sc_bill",
+   "fieldtype": "Data",
+   "label": "Sc Bill",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subcontractor",
+   "fieldtype": "Link",
+   "label": "Subcontractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certified_by",
+   "fieldtype": "Link",
+   "label": "Certified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "cert_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Certificate Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Due Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "certified_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "net_payable",
+   "fieldtype": "Currency",
+   "label": "Net Payable"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks",
+   "max_height": "150px"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SC Payment Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_glnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xgqp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "SC Payment Deduction"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SCPC-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-04 12:48:49.958561",
+ "modified_by": "Administrator",
+ "module": "Subcontractor Management",
+ "name": "SC Payment Certificate",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
