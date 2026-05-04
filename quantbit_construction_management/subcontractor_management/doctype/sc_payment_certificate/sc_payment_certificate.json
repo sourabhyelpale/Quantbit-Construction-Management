@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:cert_no",
+ "creation": "2026-05-04 10:48:12.887840",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "section_identity",
+  "project",
+  "cert_no",
+  "subcontract",
+  "col_break_ident1",
+  "sc_bill",
+  "subcontractor",
+  "deductions",
+  "col_break_ident2",
+  "certified_by",
+  "purchase_invoice",
+  "cert_date",
+  "payment_due_date",
+  "section_financial",
+  "certified_amount",
+  "col_break_fin1",
+  "net_payable",
+  "section_notes",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "default Draft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cert_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Certificate No",
+   "unique": 1
+  },
+  {
+   "fieldname": "subcontract",
+   "fieldtype": "Data",
+   "label": "Subcontract"
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Ident1"
+  },
+  {
+   "fieldname": "sc_bill",
+   "fieldtype": "Data",
+   "label": "Sc Bill"
+  },
+  {
+   "fieldname": "subcontractor",
+   "fieldtype": "Link",
+   "label": "Subcontractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Data",
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break",
+   "label": "Col Break Ident2"
+  },
+  {
+   "fieldname": "certified_by",
+   "fieldtype": "Link",
+   "label": "Certified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "cert_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Certificate Date"
+  },
+  {
+   "fieldname": "payment_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Due Date"
+  },
+  {
+   "fieldname": "section_financial",
+   "fieldtype": "Section Break",
+   "label": "Financial Summary (Auto-computed)"
+  },
+  {
+   "fieldname": "certified_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Amount"
+  },
+  {
+   "fieldname": "col_break_fin1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Fin1"
+  },
+  {
+   "fieldname": "net_payable",
+   "fieldtype": "Currency",
+   "label": "Net Payable"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes & Justification"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SC Payment Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-04 10:48:12.887840",
+ "modified_by": "Administrator",
+ "module": "Subcontractor Management",
+ "name": "SC Payment Certificate",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
