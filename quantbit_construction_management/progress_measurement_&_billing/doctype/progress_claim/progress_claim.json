@@ -1,0 +1,269 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:claim_no",
+ "creation": "2026-05-05 17:39:35.951240",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "section_identity",
+  "project",
+  "claim_no",
+  "ra_bill_no",
+  "col_break_ident1",
+  "contract",
+  "advance_recovery",
+  "retention",
+  "col_break_ident2",
+  "other_deduction",
+  "sales_invoice",
+  "claim_date",
+  "submission_date",
+  "certification_date",
+  "section_financial",
+  "gross_amount",
+  "vo_amount",
+  "col_break_fin1",
+  "total_gross",
+  "net_claim",
+  "col_break_fin2",
+  "tax_amount",
+  "invoice_amount",
+  "section_included_vos",
+  "included_vos",
+  "section_break_cytw",
+  "progress_claim_item",
+  "section_periods",
+  "period_from",
+  "col_break_period1",
+  "period_to",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "default Draft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "claim_no",
+   "fieldtype": "Data",
+   "label": "Claim No",
+   "unique": 1
+  },
+  {
+   "fieldname": "ra_bill_no",
+   "fieldtype": "Int",
+   "label": "Ra Bill No"
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Ident1"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Data",
+   "label": "Contract"
+  },
+  {
+   "fieldname": "advance_recovery",
+   "fieldtype": "Currency",
+   "label": "Advance Recovery"
+  },
+  {
+   "fieldname": "retention",
+   "fieldtype": "Currency",
+   "label": "Retention"
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break",
+   "label": "Col Break Ident2"
+  },
+  {
+   "fieldname": "other_deduction",
+   "fieldtype": "Currency",
+   "label": "Other Deduction"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "claim_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Claim Date"
+  },
+  {
+   "fieldname": "submission_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Submission Date"
+  },
+  {
+   "fieldname": "certification_date",
+   "fieldtype": "Date",
+   "label": "Certification Date"
+  },
+  {
+   "fieldname": "section_financial",
+   "fieldtype": "Section Break",
+   "label": "Financial Summary (Auto-computed)"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount"
+  },
+  {
+   "fieldname": "vo_amount",
+   "fieldtype": "Currency",
+   "label": "Vo Amount"
+  },
+  {
+   "fieldname": "col_break_fin1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Fin1"
+  },
+  {
+   "fieldname": "total_gross",
+   "fieldtype": "Currency",
+   "label": "Total Gross"
+  },
+  {
+   "fieldname": "net_claim",
+   "fieldtype": "Currency",
+   "label": "Net Claim"
+  },
+  {
+   "fieldname": "col_break_fin2",
+   "fieldtype": "Column Break",
+   "label": "Col Break Fin2"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Amount"
+  },
+  {
+   "fieldname": "section_included_vos",
+   "fieldtype": "Section Break",
+   "label": "Included Vos"
+  },
+  {
+   "fieldname": "included_vos",
+   "fieldtype": "Table",
+   "label": "Included Vos",
+   "options": "Claim Included VO"
+  },
+  {
+   "fieldname": "section_periods",
+   "fieldtype": "Section Break",
+   "label": "Period Distribution"
+  },
+  {
+   "fieldname": "period_from",
+   "fieldtype": "Date",
+   "label": "Period From"
+  },
+  {
+   "fieldname": "col_break_period1",
+   "fieldtype": "Column Break",
+   "label": "Col Break Period1"
+  },
+  {
+   "fieldname": "period_to",
+   "fieldtype": "Date",
+   "label": "Period To"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Progress Claim",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_cytw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "progress_claim_item",
+   "fieldtype": "Table",
+   "label": "Progress Claim Item",
+   "options": "Progress Claim Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-05 17:40:13.506144",
+ "modified_by": "Administrator",
+ "module": "Progress Measurement & Billing",
+ "name": "Progress Claim",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -5,3 +5,5 @@ Document Control
 BOQ
 Labour Management
 Subcontractor Management
+Quality and Safety Management
+Progress Measurement & Billing

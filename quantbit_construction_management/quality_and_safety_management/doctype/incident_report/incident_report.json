@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-05 17:30:03.585010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "incident_no",
+  "project",
+  "date",
+  "time",
+  "location",
+  "naming_series",
+  "col_break_ident1",
+  "incident_type",
+  "injured_person",
+  "employee_type",
+  "severity",
+  "lost_time_days",
+  "description",
+  "col_break_ident2",
+  "root_cause",
+  "immediate_cause",
+  "contributing_factors",
+  "column_break_efua",
+  "photos",
+  "medical_report",
+  "regulatory_notification",
+  "notification_date",
+  "status",
+  "linked_observation",
+  "section_corrective_actions",
+  "corrective_actions",
+  "section_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Reported\nUnder Investigation\nClosed\nNotified",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_type",
+   "fieldtype": "Select",
+   "label": "Employee Type",
+   "options": "Direct\nSubcontractor\nVisitor\nOther"
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "label": "Incident Type",
+   "options": "First Aid Case\nMedical Treatment Case Restricted Work Case\nLost Time Injury\nFatality Property Damage Environmental Near Miss",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Incident No",
+   "unique": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "injured_person",
+   "fieldtype": "Data",
+   "label": "Injured Person"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "Low\nMedium\nHigh\nCritical\nFatality",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lost_time_days",
+   "fieldtype": "Int",
+   "label": "Lost Time Days"
+  },
+  {
+   "fieldname": "immediate_cause",
+   "fieldtype": "Text",
+   "label": "Immediate Cause",
+   "max_height": "100px",
+   "reqd": 1
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Text",
+   "label": "Root Cause",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contributing_factors",
+   "fieldtype": "Text",
+   "label": "Contributing Factors",
+   "max_height": "100px"
+  },
+  {
+   "default": "0",
+   "fieldname": "regulatory_notification",
+   "fieldtype": "Check",
+   "label": "Regulatory Notification"
+  },
+  {
+   "fieldname": "linked_observation",
+   "fieldtype": "Link",
+   "label": "Linked Observation",
+   "options": "Safety Observation"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notification_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Notification Date"
+  },
+  {
+   "fieldname": "section_corrective_actions",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "corrective_actions",
+   "fieldtype": "Table",
+   "label": "Corrective Actions",
+   "options": "Incident CA"
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Attach",
+   "label": "Photos"
+  },
+  {
+   "fieldname": "medical_report",
+   "fieldtype": "Attach",
+   "label": "Medical Report"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Incident Description",
+   "max_height": "100px",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Incident Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "INC-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_efua",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-05 18:27:33.466358",
+ "modified_by": "Administrator",
+ "module": "Quality and Safety Management",
+ "name": "Incident Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

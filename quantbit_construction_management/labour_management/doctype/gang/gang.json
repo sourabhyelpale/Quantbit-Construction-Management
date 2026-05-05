@@ -23,11 +23,12 @@
  ],
  "fields": [
   {
+   "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Mandatory\ndefault Active",
+   "options": "\nActive\nDemobilised\nStandby",
    "reqd": 1
   },
   {
@@ -79,10 +80,11 @@
    "options": "Supplier"
   },
   {
+   "default": "General",
    "fieldname": "trade",
    "fieldtype": "Select",
    "label": "Primary Trade",
-   "options": "default General"
+   "options": "\nMasonry\nCarpentry\nSteel Fixing\nConcrete\nExcavation\nGeneral\nOther"
   },
   {
    "fieldname": "size",
@@ -104,7 +106,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-02 11:12:18.823696",
+ "modified": "2026-05-05 12:42:49.738103",
  "modified_by": "Administrator",
  "module": "Labour Management",
  "name": "Gang",

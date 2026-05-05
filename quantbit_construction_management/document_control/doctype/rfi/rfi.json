@@ -196,6 +196,7 @@
    "fieldname": "rfi_number",
    "fieldtype": "Data",
    "label": "RFI Number",
+   "read_only": 1,
    "unique": 1
   },
   {
@@ -227,7 +228,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-02 15:47:03.973316",
+ "modified": "2026-05-05 12:07:40.885055",
  "modified_by": "Administrator",
  "module": "Document Control",
  "name": "RFI",
