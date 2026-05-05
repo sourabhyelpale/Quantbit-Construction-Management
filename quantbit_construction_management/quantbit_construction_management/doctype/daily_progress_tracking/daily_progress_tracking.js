@@ -10,11 +10,23 @@ frappe.ui.form.on("Daily Progress Tracking", {
 
 			return {
 				filters: {
-					status: "Template",
+					custom_is_stage: 1,
+					is_group: 1,
 					project: doc.project
 				}
 			};
 
+		});
+
+	},
+
+	after_save(frm) {
+
+		if (!frm.doc.project) return;
+
+		// 🔥 notify project screen
+		frappe.publish_realtime("project_progress_refresh", {
+			project: frm.doc.project
 		});
 
 	}
@@ -111,66 +123,74 @@ function validate_progress_limits(frm, cdt, cdn, fieldname) {
     let row = locals[cdt][cdn];
 
     let total_qty = row.total_qty || 0;
+    let achieved_today = row.achieved_today || 0;
 
-    let total_achieved = row.total_achieved || 0;
+    let previous_today = row._previous_achieved_today || 0;
+    let base_achieved = (row.total_achieved || 0) - previous_today;
 
-    let remaining_qty = total_qty - total_achieved;
+    let remaining_qty = total_qty - base_achieved;
 
     let entered_value = row[fieldname] || 0;
-
 
     if (entered_value > remaining_qty) {
 
         frappe.msgprint({
-
             title: "Invalid Entry",
-
-            message:
-            `${fieldname.replace("_", " ")} cannot be greater than remaining quantity (${remaining_qty})`,
-
+            message: `${fieldname.replace("_", " ")} cannot exceed remaining quantity (${remaining_qty})`,
             indicator: "red"
-
         });
 
-        row[fieldname] = remaining_qty > 0 ? remaining_qty : 0;
-
-        frm.refresh_field("dpr_activity_progress");
-
+        return;
     }
-
 }
 
 
 function update_progress(frm, cdt, cdn) {
 
-	let row = locals[cdt][cdn];
+    let row = locals[cdt][cdn];
 
+    let total_qty = row.total_qty || 0;
+    let achieved_today = row.achieved_today || 0;
 
-	let total_qty = row.total_qty || 0;
+    // 🔥 remove previous today value
+    let previous_today = row._previous_achieved_today || 0;
 
-	let achieved_today = row.achieved_today || 0;
+    let base_achieved = (row.total_achieved || 0) - previous_today;
 
-	let total_previous = row.total_achieved || 0;
+    let new_total = base_achieved + achieved_today;
 
+    // 🚨 VALIDATION
+    if (new_total > total_qty) {
 
-	row.total_achieved = total_previous + achieved_today;
+        frappe.msgprint({
+            title: "Invalid Entry",
+            message: "Total achieved cannot exceed total quantity",
+            indicator: "red"
+        });
 
+        // reset today's value
+        row.achieved_today = 0;
 
-	if (total_qty > 0) {
+        // restore previous correct total
+        row.total_achieved = base_achieved;
 
-		row.percent_completed =
+        // reset tracker
+        row._previous_achieved_today = 0;
 
-		(row.total_achieved / total_qty) * 100;
+    } else {
 
-	}
+        // ✅ valid case
+        row.total_achieved = new_total;
+        row._previous_achieved_today = achieved_today;
 
-	else {
+    }
 
-		row.percent_completed = 0;
+    // % calculation
+    if (total_qty > 0) {
+        row.percent_completed = (row.total_achieved / total_qty) * 100;
+    } else {
+        row.percent_completed = 0;
+    }
 
-	}
-
-
-	frm.refresh_field("dpr_activity_progress");
-
+    frm.refresh_field("dpr_activity_progress");
 }

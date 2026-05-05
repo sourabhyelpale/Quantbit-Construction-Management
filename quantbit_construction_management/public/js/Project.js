@@ -10,6 +10,19 @@ frappe.ui.form.on('Project', {
     }
 });
 
+frappe.realtime.on("project_progress_refresh", (data) => {
+
+    if (!cur_frm || cur_frm.doc.doctype !== "Project") return;
+
+    if (cur_frm.doc.name === data.project) {
+
+        // 🔥 refresh hierarchy UI
+        load_hierarchy(cur_frm);
+
+    }
+
+});
+
 function inject_hierarchy_css() {
     const css = `
         .hierarchy-row { position: relative; transition: all 0.2s ease; cursor: pointer; margin-bottom: 5px; }
@@ -137,7 +150,7 @@ function load_hierarchy(frm) {
             fields: [
                 "name", "subject", "parent_task", "status", "priority",
                 "description", "task_weight", "custom_is_stage",
-                "custom_is_task", "custom_is_subtask", "expected_time", "exp_end_date"
+                "custom_is_task", "custom_is_subtask", "expected_time", "exp_end_date","progress"
             ],
             order_by: "creation asc",
             limit_page_length: 1000
@@ -183,9 +196,11 @@ function load_hierarchy(frm) {
             let overall_stage_total = 0;
 
             Object.values(stages).forEach(stageObj => {
-                let stage_task_total = 0;
+                let stage_progress = 0;
                 stageObj.tasks.forEach(taskObj => {
-                    stage_task_total += flt(taskObj.data.task_weight || 0);
+                    let progress = taskObj.data.progress || 0;
+                    let weight = taskObj.data.task_weight || 0;
+                    stage_progress += (progress * weight) / 100;
                 });
                 overall_stage_total += flt(stageObj.data.task_weight || 0);
 
@@ -219,7 +234,7 @@ function load_hierarchy(frm) {
                     // Task Total Row (Inside Stage)
                     html += render_total_row(
                         "Tasks Total",
-                        stage_task_total,
+                        stage_progress.toFixed(2),
                         40
                     );
                 }
@@ -307,6 +322,7 @@ function render_row(item, type, is_expanded) {
          <div><span class="detail-label">Status:</span> ${item.status || 'Open'}</div>
          <div><span class="detail-label">Priority:</span> ${item.priority || 'Medium'}</div>
          <div><span class="detail-label">Weight:</span> ${item.task_weight || 0}</div>
+         <div><span class="detail-label">Progress %:</span> ${item.progress || 0}</div>
          <div style="margin-top:5px; font-style: italic; color: #ecf0f1;">${item.description || 'No description provided.'}</div>
       </div>
 
@@ -516,76 +532,44 @@ function attach_events(frm, all_tasks) {
 
             }
 
-            validate_total_weight(frm, values.task_weight).then(result => {
+            function validate_total_weight(frm, new_weight, old_weight = 0, parent_task = null) {
 
-                if (!result.valid) {
+                return new Promise(resolve => {
 
-                    frappe.msgprint({
-
-                        title: __("Weight Limit Exceeded"),
-
-                        message: __(
-                            "Cannot add stage. Current total: {0}%, New total would be: {1}%. Remaining available: {2}%",
-                            [
-                                result.current_total.toFixed(2),
-                                result.projected_total.toFixed(2),
-                                result.remaining.toFixed(2)
-                            ]
-                        ),
-
-                        indicator: "red"
-
-                    });
-
-                    return;
-
-                }
-
-                frappe.call({
-
-                    method: "frappe.client.insert",
-
-                    args: {
-
-                        doc: {
-
+                    frappe.call({
+                        method: "frappe.client.get_list",
+                        args: {
                             doctype: "Task",
+                            filters: parent_task
+                                ? { parent_task: parent_task }
+                                : { project: frm.doc.name, custom_is_stage: 1 },
+                            fields: ["task_weight"]
+                        },
+                        callback: function (r) {
 
-                            subject: values.subject,
+                            let current_total = 0;
 
-                            project: frm.doc.name,
+                            if (r.message) {
+                                r.message.forEach(t => {
+                                    current_total += t.task_weight || 0;
+                                });
+                            }
 
-                            custom_is_stage: 1,
+                            // 🔥 FIXED LOGIC
+                            let projected_total = (current_total - (old_weight || 0)) + new_weight;
 
-                            is_group: 1,
+                            let remaining = 100 - (current_total - (old_weight || 0));
 
-                            task_weight: values.task_weight,
-
-                            description: values.description
-
+                            resolve({
+                                valid: projected_total <= 100,
+                                current_total: current_total,
+                                projected_total: projected_total,
+                                remaining: remaining
+                            });
                         }
-
-                    },
-
-                    callback: function () {
-
-                        frappe.show_alert({
-
-                            message: __("Stage Created"),
-
-                            indicator: "green"
-
-                        });
-
-                        d.hide();
-
-                        load_hierarchy(frm);
-
-                    }
-
+                    });
                 });
-
-            });
+            }
 
         }
 
@@ -929,38 +913,67 @@ function attach_events(frm, all_tasks) {
                     default: doc.description
                 }
             ], function (values) {
-                // Validate weight for all types
+
                 if (type === "stage") {
-                    validate_total_weight(frm, values.task_weight, docname).then(result => {
-                        if (!result.valid) {
-                            frappe.msgprint({
-                                title: __("Weight Limit Exceeded"),
-                                message: __("Cannot update stage. Current total: {0}%, New total would be: {1}%. Maximum allowed is 100%.<br>Remaining weight available: {2}%",
-                                    [result.current_total.toFixed(2), result.projected_total.toFixed(2), result.remaining.toFixed(2)]),
-                                indicator: "red"
-                            });
-                            return;
+
+                    // 🔥 fetch existing task (stage)
+                    frappe.call({
+                        method: "frappe.client.get",
+                        args: {
+                            doctype: "Task",
+                            name: docname
+                        },
+                        callback: function (r) {
+
+                            let task = r.message;
+                            let old_weight = task.task_weight || 0;
+
+                            validate_total_weight(frm, values.task_weight, old_weight, null)
+                                .then(result => {
+
+                                    if (!result.valid) {
+                                        frappe.msgprint({
+                                            title: __("Weight Limit Exceeded"),
+                                            message: __("Cannot update stage. Current total: {0}%, New total would be: {1}%. Maximum allowed is 100%.<br>Remaining weight available: {2}%",
+                                                [result.current_total.toFixed(2), result.projected_total.toFixed(2), result.remaining.toFixed(2)]),
+                                            indicator: "red"
+                                        });
+                                        return;
+                                    }
+
+                                    update_task_values(); // ✅ only after validation
+
+                                });
                         }
-                        update_task_values();
                     });
                 } else if (type === "task") {
-                    // Get the parent stage for task validation
-                    frappe.db.get_value("Task", docname, "parent_task").then(r => {
-                        if (r.message && r.message.parent_task) {
-                            validate_task_weight(frm, r.message.parent_task, values.task_weight, docname).then(result => {
-                                if (!result.valid) {
-                                    frappe.msgprint({
-                                        title: __("Task Weight Limit Exceeded"),
-                                        message: __("Cannot update task. Current total for this stage: {0}%, New total would be: {1}%. Maximum allowed is 100%.<br>Remaining weight available: {2}%",
-                                            [result.current_total.toFixed(2), result.projected_total.toFixed(2), result.remaining.toFixed(2)]),
-                                        indicator: "red"
-                                    });
-                                    return;
-                                }
-                                update_task_values();
-                            });
-                        } else {
-                            update_task_values();
+                    frappe.call({
+                        method: "frappe.client.get",
+                        args: {
+                            doctype: "Task",
+                            name: docname
+                        },
+                        callback: function (r) {
+
+                            let task = r.message;
+                            let old_weight = task.task_weight || 0;
+
+                            validate_total_weight(frm, values.task_weight, old_weight, task.parent_task)
+                                .then(result => {
+
+                                    if (!result.valid) {
+                                        frappe.msgprint({
+                                            title: __("Weight Limit Exceeded"),
+                                            message: __("Cannot update task. Current total: {0}%, New total would be: {1}%. Maximum allowed is 100%.<br>Remaining weight available: {2}%",
+                                                [result.current_total.toFixed(2), result.projected_total.toFixed(2), result.remaining.toFixed(2)]),
+                                            indicator: "red"
+                                        });
+                                        return;
+                                    }
+
+                                    update_task_values();
+
+                                });
                         }
                     });
                 } else if (type === "subtask") {

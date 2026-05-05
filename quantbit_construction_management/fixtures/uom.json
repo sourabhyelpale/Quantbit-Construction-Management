@@ -77,18 +77,6 @@
   "docstatus": 0,
   "doctype": "UOM",
   "enabled": 1,
-  "modified": "2026-03-10 12:16:15.014711",
-  "must_be_whole_number": 0,
-  "name": "Acre",
-  "symbol": null,
-  "uom_name": "Acre"
- },
- {
-  "common_code": null,
-  "description": null,
-  "docstatus": 0,
-  "doctype": "UOM",
-  "enabled": 1,
   "modified": "2026-03-10 12:16:15.015690",
   "must_be_whole_number": 0,
   "name": "Acre (US)",
@@ -2561,18 +2549,6 @@
   "docstatus": 0,
   "doctype": "UOM",
   "enabled": 1,
-  "modified": "2026-03-10 12:16:15.275707",
-  "must_be_whole_number": 0,
-  "name": "Square Meter",
-  "symbol": null,
-  "uom_name": "Square Meter"
- },
- {
-  "common_code": null,
-  "description": null,
-  "docstatus": 0,
-  "doctype": "UOM",
-  "enabled": 1,
   "modified": "2026-03-10 12:16:15.276503",
   "must_be_whole_number": 0,
   "name": "Square Mile",
@@ -2981,18 +2957,6 @@
   "docstatus": 0,
   "doctype": "UOM",
   "enabled": 1,
-  "modified": "2026-03-10 12:16:15.273343",
-  "must_be_whole_number": 0,
-  "name": "Square Foot",
-  "symbol": null,
-  "uom_name": "Square Foot"
- },
- {
-  "common_code": null,
-  "description": null,
-  "docstatus": 0,
-  "doctype": "UOM",
-  "enabled": 1,
   "modified": "2026-03-10 12:16:15.274175",
   "must_be_whole_number": 0,
   "name": "Square Inch",
@@ -3046,5 +3010,41 @@
   "name": "Cement Bag",
   "symbol": null,
   "uom_name": "Cement Bag"
+ },
+ {
+  "common_code": null,
+  "description": null,
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2026-03-10 12:16:15.014711",
+  "must_be_whole_number": 0,
+  "name": "Acre",
+  "symbol": null,
+  "uom_name": "Acre"
+ },
+ {
+  "common_code": null,
+  "description": null,
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2026-03-10 12:16:15.275707",
+  "must_be_whole_number": 0,
+  "name": "Square Meter",
+  "symbol": null,
+  "uom_name": "Square Meter"
+ },
+ {
+  "common_code": null,
+  "description": null,
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2026-03-10 12:16:15.273343",
+  "must_be_whole_number": 0,
+  "name": "Square Foot",
+  "symbol": null,
+  "uom_name": "Square Foot"
  }
 ]

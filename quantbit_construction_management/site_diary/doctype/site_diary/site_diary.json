@@ -27,6 +27,9 @@
   "work_stopped",
   "stoppage_hours",
   "stoppage_reason",
+  "section_break_rikz",
+  "task",
+  "activity_progress",
   "section_break_wcbr",
   "material_deliveries",
   "section_break_rgpc",
@@ -131,13 +134,13 @@
    "fieldname": "max_temp",
    "fieldtype": "Float",
    "label": "Max Temp",
-   "placeholder": "`C"
+   "placeholder": "\u00b0C"
   },
   {
    "fieldname": "min_temp",
    "fieldtype": "Float",
    "label": "Min Temp",
-   "placeholder": "`C"
+   "placeholder": "\u00b0C"
   },
   {
    "fieldname": "wind_speed_kmh",
@@ -154,7 +157,8 @@
    "depends_on": "eval:doc.work_stopped==1;",
    "fieldname": "stoppage_reason",
    "fieldtype": "Text",
-   "label": "Stoppage Reason"
+   "label": "Stoppage Reason",
+   "max_height": "100px"
   },
   {
    "depends_on": "eval:doc.work_stopped==1;",
@@ -165,7 +169,8 @@
   {
    "fieldname": "general_remarks",
    "fieldtype": "Text",
-   "label": "General Remarks"
+   "label": "General Remarks",
+   "max_height": "150px"
   },
   {
    "fieldname": "site_photos",
@@ -221,13 +226,30 @@
   {
    "fieldname": "section_break_xpve",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_rikz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Table",
+   "label": "Task",
+   "options": "Task Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity_progress",
+   "fieldtype": "Table",
+   "label": "Activity Progress",
+   "options": "DPR Activity Progress"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-02 16:06:48.006007",
+ "modified": "2026-05-05 10:42:59.905576",
  "modified_by": "Administrator",
  "module": "Site Diary",
  "name": "Site Diary",

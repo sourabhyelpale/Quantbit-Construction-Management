@@ -9,6 +9,10 @@ class DailyProgressTracking(Document):
 	
 	def before_save(self):
 
+		self.validate_dpr_date()
+
+		updated_tasks = set()
+
 		for row in self.dpr_activity_progress:
 
 			if not row.task or not row.total_qty:
@@ -16,14 +20,29 @@ class DailyProgressTracking(Document):
 
 			percent = (row.total_achieved / row.total_qty) * 100
 
-			frappe.db.set_value(
-				"Task",
-				row.task,
-				"progress",
-				percent
-			)
+			frappe.db.set_value("Task", row.task, "progress", percent)
 
-			update_parent_progress(row.task)
+			updated_tasks.add(row.task)
+
+		for task in updated_tasks:
+			update_parent_progress(task)
+
+
+	def validate_dpr_date(self):
+
+		existing = frappe.db.exists(
+			"Daily Progress Tracking",
+			{
+				"project": self.project,
+				"date": self.date,
+				"name": ["!=", self.name]
+			}
+		)
+
+		if existing:
+			frappe.throw(
+				f"A DPR already exists for date {self.date} for project {self.project}"
+			)
 
 
 @frappe.whitelist()
@@ -109,25 +128,33 @@ def update_task_progress_from_dpr(task, achieved_qty, total_qty):
 	frappe.db.set_value("Task", task, "progress", percent)
 
 	update_parent_progress(task)
+
 	
 def update_parent_progress(task):
 
-	parent = frappe.db.get_value("Task", task, "parent_task")
+    parent = frappe.db.get_value("Task", task, "parent_task")
 
-	if not parent:
-		return
+    if not parent:
+        return
 
-	children = frappe.get_all(
-		"Task",
-		filters={"parent_task": parent},
-		fields=["progress"]
-	)
+    children = frappe.get_all(
+        "Task",
+        filters={"parent_task": parent},
+        fields=["progress", "task_weight"]
+    )
 
-	if not children:
-		return
+    if not children:
+        return
 
-	avg_progress = sum([c.progress or 0 for c in children]) / len(children)
+    weighted_total = 0
 
-	frappe.db.set_value("Task", parent, "progress", avg_progress)
+    for c in children:
+        progress = c.progress or 0
+        weight = c.task_weight or 0
 
-	update_parent_progress(parent)
+        weighted_total += (progress * weight) / 100
+
+    frappe.db.set_value("Task", parent, "progress", weighted_total)
+
+    # 🔁 recursive update
+    update_parent_progress(parent)
