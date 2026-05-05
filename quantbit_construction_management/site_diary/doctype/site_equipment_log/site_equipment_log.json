@@ -21,40 +21,44 @@
  ],
  "fields": [
   {
-   "columns": 1,
+   "columns": 2,
    "fieldname": "equipment",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Equipment",
-   "options": "Asset"
+   "options": "Equipment",
+   "reqd": 1
   },
   {
-   "columns": 1,
+   "columns": 2,
+   "fetch_from": "equipment.equipment_name",
    "fieldname": "equipment_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Equipment Name"
   },
   {
-   "columns": 1,
+   "columns": 2,
    "default": "Other",
    "fieldname": "type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type",
-   "options": "\nExcavator\nCrane\nConcrete\nPump\nBulldozer\nRoller\nGenerator\nScaffolding\nFormwork\nOther"
+   "options": "\nExcavator\nCrane\nConcrete\nPump\nBulldozer\nRoller\nGenerator\nScaffolding\nFormwork\nOther",
+   "reqd": 1
   },
   {
-   "columns": 1,
+   "columns": 2,
    "default": "Own",
    "fieldname": "owner_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Owner Type",
-   "options": "\nOwn\nHired\nSubcontractor"
+   "options": "\nOwn\nHired\nSubcontractor",
+   "reqd": 1
   },
   {
-   "columns": 1,
+   "columns": 2,
    "fieldname": "hire_supplier",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -65,35 +69,36 @@
    "columns": 1,
    "fieldname": "working_hours",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Working Hours"
+   "label": "Working Hours",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "columns": 1,
    "fieldname": "idle_hours",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Idle Hours"
+   "label": "Idle Hours",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "columns": 1,
    "fieldname": "breakdown_hours",
    "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Breakdown Hours"
+   "label": "Breakdown Hours",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
-   "columns": 1,
+   "columns": 2,
    "fieldname": "work_area",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Work Area"
   },
   {
    "columns": 1,
    "fieldname": "remarks",
    "fieldtype": "Small Text",
-   "in_list_view": 1,
    "label": "Remarks"
   },
   {
@@ -109,7 +114,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-04-29 16:20:31.175514",
+ "modified": "2026-05-05 11:31:44.847889",
  "modified_by": "Administrator",
  "module": "Site Diary",
  "name": "Site Equipment Log",
