@@ -21,6 +21,10 @@ app_license = "mit"
 # 	}
 # ]
 
+override_doctype_class = {
+    "Task": "quantbit_construction_management.overrides.task.CustomTask"
+}
+
 doctype_js = {
   "Project" : "public/js/Project.js"
 }
