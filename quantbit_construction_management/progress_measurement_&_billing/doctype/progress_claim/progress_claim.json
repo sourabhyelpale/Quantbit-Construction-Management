@@ -1,44 +1,45 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:claim_no",
+ "autoname": "naming_series:",
  "creation": "2026-05-05 17:39:35.951240",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status",
   "section_identity",
-  "project",
   "claim_no",
   "ra_bill_no",
+  "naming_series",
   "col_break_ident1",
+  "project",
   "contract",
-  "advance_recovery",
-  "retention",
-  "col_break_ident2",
-  "other_deduction",
-  "sales_invoice",
   "claim_date",
-  "submission_date",
-  "certification_date",
+  "col_break_ident2",
+  "period_from",
+  "period_to",
+  "section_included_vos",
+  "progress_claim_item",
+  "included_vos",
   "section_financial",
   "gross_amount",
   "vo_amount",
-  "col_break_fin1",
   "total_gross",
-  "net_claim",
+  "col_break_fin1",
+  "advance_recovery",
+  "retention",
+  "other_deduction",
   "col_break_fin2",
+  "net_claim",
   "tax_amount",
   "invoice_amount",
-  "section_included_vos",
-  "included_vos",
-  "section_break_cytw",
-  "progress_claim_item",
+  "column_break_xpob",
+  "status",
+  "sales_invoice",
+  "submission_date",
+  "certification_date",
   "section_periods",
-  "period_from",
-  "col_break_period1",
-  "period_to",
+  "column_break_uipe",
   "amended_from"
  ],
  "fields": [
@@ -47,13 +48,12 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "default Draft",
+   "options": "Draft\nSubmitted\nUnder Review\nCertified\nDisputed\nFinal",
    "reqd": 1
   },
   {
    "fieldname": "section_identity",
-   "fieldtype": "Section Break",
-   "label": "Details"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "project",
@@ -70,14 +70,14 @@
    "unique": 1
   },
   {
+   "default": "0",
    "fieldname": "ra_bill_no",
    "fieldtype": "Int",
    "label": "Ra Bill No"
   },
   {
    "fieldname": "col_break_ident1",
-   "fieldtype": "Column Break",
-   "label": "Col Break Ident1"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "contract",
@@ -85,21 +85,23 @@
    "label": "Contract"
   },
   {
+   "default": "0",
    "fieldname": "advance_recovery",
    "fieldtype": "Currency",
    "label": "Advance Recovery"
   },
   {
+   "default": "0",
    "fieldname": "retention",
    "fieldtype": "Currency",
-   "label": "Retention"
+   "label": "Retention Deduction"
   },
   {
    "fieldname": "col_break_ident2",
-   "fieldtype": "Column Break",
-   "label": "Col Break Ident2"
+   "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "other_deduction",
    "fieldtype": "Currency",
    "label": "Other Deduction"
@@ -111,10 +113,12 @@
    "options": "Sales Invoice"
   },
   {
+   "default": "Today",
    "fieldname": "claim_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Claim Date"
+   "label": "Claim Date",
+   "reqd": 1
   },
   {
    "fieldname": "submission_date",
@@ -129,53 +133,55 @@
   },
   {
    "fieldname": "section_financial",
-   "fieldtype": "Section Break",
-   "label": "Financial Summary (Auto-computed)"
+   "fieldtype": "Section Break"
   },
   {
+   "default": "0",
    "fieldname": "gross_amount",
    "fieldtype": "Currency",
    "label": "Gross Amount"
   },
   {
+   "default": "0",
    "fieldname": "vo_amount",
    "fieldtype": "Currency",
    "label": "Vo Amount"
   },
   {
    "fieldname": "col_break_fin1",
-   "fieldtype": "Column Break",
-   "label": "Col Break Fin1"
+   "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "total_gross",
    "fieldtype": "Currency",
    "label": "Total Gross"
   },
   {
+   "default": "0",
    "fieldname": "net_claim",
    "fieldtype": "Currency",
    "label": "Net Claim"
   },
   {
    "fieldname": "col_break_fin2",
-   "fieldtype": "Column Break",
-   "label": "Col Break Fin2"
+   "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "tax_amount",
    "fieldtype": "Currency",
-   "label": "Tax Amount"
+   "label": "Tax / GST"
   },
   {
+   "default": "0",
    "fieldname": "invoice_amount",
    "fieldtype": "Currency",
    "label": "Invoice Amount"
   },
   {
    "fieldname": "section_included_vos",
-   "fieldtype": "Section Break",
-   "label": "Included Vos"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "included_vos",
@@ -185,23 +191,19 @@
   },
   {
    "fieldname": "section_periods",
-   "fieldtype": "Section Break",
-   "label": "Period Distribution"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "period_from",
    "fieldtype": "Date",
-   "label": "Period From"
-  },
-  {
-   "fieldname": "col_break_period1",
-   "fieldtype": "Column Break",
-   "label": "Col Break Period1"
+   "label": "Period From",
+   "reqd": 1
   },
   {
    "fieldname": "period_to",
    "fieldtype": "Date",
-   "label": "Period To"
+   "label": "Period To",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -214,25 +216,35 @@
    "search_index": 1
   },
   {
-   "fieldname": "section_break_cytw",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "progress_claim_item",
    "fieldtype": "Table",
-   "label": "Progress Claim Item",
+   "label": "Claim Item",
    "options": "Progress Claim Item"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PC-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_uipe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xpob",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-05 17:40:13.506144",
+ "modified": "2026-05-06 10:48:23.959795",
  "modified_by": "Administrator",
  "module": "Progress Measurement & Billing",
  "name": "Progress Claim",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

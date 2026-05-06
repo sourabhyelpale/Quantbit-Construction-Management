@@ -1,33 +1,32 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:cert_no",
+ "autoname": "naming_series:",
  "creation": "2026-05-05 17:40:33.519589",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status",
   "section_identity",
-  "project",
   "cert_no",
-  "col_break_ident1",
   "progress_claim",
-  "certified_by",
-  "col_break_ident2",
+  "project",
+  "naming_series",
+  "col_break_ident1",
   "cert_date",
-  "payment_due_date",
-  "section_financial",
+  "certified_by",
   "submitted_amount",
   "certified_amount",
-  "col_break_fin1",
+  "col_break_ident2",
   "net_certified",
+  "payment_due_date",
+  "document",
+  "status",
   "section_disputed_items",
   "disputed_items",
   "section_deductions",
   "deductions",
   "section_attachments",
-  "document",
   "amended_from"
  ],
  "fields": [
@@ -36,13 +35,12 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "default Draft",
+   "options": "Draft\nIssued\nPaid",
    "reqd": 1
   },
   {
    "fieldname": "section_identity",
-   "fieldtype": "Section Break",
-   "label": "Details"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "project",
@@ -58,8 +56,7 @@
   },
   {
    "fieldname": "col_break_ident1",
-   "fieldtype": "Column Break",
-   "label": "Col Break Ident1"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "progress_claim",
@@ -72,18 +69,20 @@
   {
    "fieldname": "certified_by",
    "fieldtype": "Data",
-   "label": "Certified By"
+   "label": "Certified By",
+   "reqd": 1
   },
   {
    "fieldname": "col_break_ident2",
-   "fieldtype": "Column Break",
-   "label": "Col Break Ident2"
+   "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "cert_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Cert Date"
+   "label": "Cert Date",
+   "reqd": 1
   },
   {
    "fieldname": "payment_due_date",
@@ -92,34 +91,27 @@
    "label": "Payment Due Date"
   },
   {
-   "fieldname": "section_financial",
-   "fieldtype": "Section Break",
-   "label": "Financial Summary (Auto-computed)"
-  },
-  {
+   "default": "0",
    "fieldname": "submitted_amount",
    "fieldtype": "Currency",
    "label": "Submitted Amount"
   },
   {
+   "default": "0",
    "fieldname": "certified_amount",
    "fieldtype": "Currency",
-   "label": "Certified Amount"
+   "label": "Certified Amount",
+   "reqd": 1
   },
   {
-   "fieldname": "col_break_fin1",
-   "fieldtype": "Column Break",
-   "label": "Col Break Fin1"
-  },
-  {
+   "default": "0",
    "fieldname": "net_certified",
    "fieldtype": "Currency",
    "label": "Net Certified"
   },
   {
    "fieldname": "section_disputed_items",
-   "fieldtype": "Section Break",
-   "label": "Disputed Items"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "disputed_items",
@@ -129,24 +121,22 @@
   },
   {
    "fieldname": "section_deductions",
-   "fieldtype": "Section Break",
-   "label": "Deductions"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "deductions",
    "fieldtype": "Table",
-   "label": "Deductions",
+   "label": "Additional Deductions",
    "options": "Cert Deduction"
   },
   {
    "fieldname": "section_attachments",
-   "fieldtype": "Section Break",
-   "label": "Attachments"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "document",
    "fieldtype": "Attach",
-   "label": "Document"
+   "label": "Certificate PDF"
   },
   {
    "fieldname": "amended_from",
@@ -157,17 +147,23 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PCERT-.YYYY.-"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-05 17:40:44.690488",
+ "modified": "2026-05-06 10:52:12.331668",
  "modified_by": "Administrator",
  "module": "Progress Measurement & Billing",
  "name": "Progress Certificate",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

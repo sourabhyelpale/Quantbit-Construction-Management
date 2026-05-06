@@ -9,39 +9,38 @@
  "field_order": [
   "section_identity",
   "vo_reference",
-  "section_financial",
+  "column_break_yejx",
   "amount"
  ],
  "fields": [
   {
    "fieldname": "section_identity",
-   "fieldtype": "Section Break",
-   "label": "Details"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "vo_reference",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Vo Reference",
+   "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "section_financial",
-   "fieldtype": "Section Break",
-   "label": "Financial Summary (Auto-computed)"
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_yejx",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-05 17:37:08.339679",
+ "modified": "2026-05-06 09:58:35.569520",
  "modified_by": "Administrator",
  "module": "Progress Measurement & Billing",
  "name": "Claim Included VO",
