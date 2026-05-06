@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-05 17:29:48.960679",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "naming_series",
+  "talk_no",
+  "project",
+  "date",
+  "conducted_by",
+  "col_break_ident1",
+  "topic",
+  "topic_category",
+  "duration_mins",
+  "content",
+  "col_break_ident2",
+  "photos",
+  "language",
+  "total_attendees",
+  "section_attendees",
+  "attendees",
+  "section_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "default": "Other",
+   "fieldname": "topic_category",
+   "fieldtype": "Select",
+   "label": "Topic Category",
+   "options": "Working at Heights\nElectrical Safety\nFire Safety\nExcavation Safety\nHand Tools\nPPE Chemical\nHandling Housekeeping\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "talk_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Talk No",
+   "unique": 1
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Conducted By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Topic",
+   "reqd": 1
+  },
+  {
+   "default": "15",
+   "fieldname": "duration_mins",
+   "fieldtype": "Int",
+   "label": "Duration Mins"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nHindi\nArabic\nBengali\nTamil"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_attendees",
+   "fieldtype": "Int",
+   "label": "Total Attendees"
+  },
+  {
+   "fieldname": "section_attendees",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attendees",
+   "fieldtype": "Table",
+   "label": "Attendees",
+   "options": "JBT Attendee"
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Attach",
+   "label": "Photos"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Long Text",
+   "label": "Talk Content",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Toolbox Talk",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TBT-.YYYY.MM.DD.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-05 18:21:03.075619",
+ "modified_by": "Administrator",
+ "module": "Quality and Safety Management",
+ "name": "Toolbox Talk",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

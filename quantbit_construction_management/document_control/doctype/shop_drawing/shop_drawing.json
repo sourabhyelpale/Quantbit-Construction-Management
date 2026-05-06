@@ -163,7 +163,8 @@
   {
    "fieldname": "sd_no",
    "fieldtype": "Data",
-   "label": "Shop Drawing No."
+   "label": "Shop Drawing No.",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_efkm",
@@ -184,7 +185,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-02 15:30:05.549184",
+ "modified": "2026-05-05 12:08:19.958218",
  "modified_by": "Administrator",
  "module": "Document Control",
  "name": "Shop Drawing",

@@ -64,7 +64,7 @@
    "fieldname": "trade",
    "fieldtype": "Select",
    "label": "Trade",
-   "options": "\nMasonry\nCarpentry\nSteel Fixing\nConcrete\nExcavation\nPainting\nPlumbing\nElectrical\nWelding\nRoofing\nGeneral Labour\nSupervisory Other"
+   "options": "\nMasonry\nCarpentry\nSteel Fixing\nConcrete\nExcavation\nPainting\nPlumbing\nElectrical\nWelding\nRoofing\nGeneral Labour\nSupervisory\nOther"
   },
   {
    "fieldname": "cost_code",
@@ -89,7 +89,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-02 11:34:36.898937",
+ "modified": "2026-05-05 12:34:29.848228",
  "modified_by": "Administrator",
  "module": "Labour Management",
  "name": "Labour Category",

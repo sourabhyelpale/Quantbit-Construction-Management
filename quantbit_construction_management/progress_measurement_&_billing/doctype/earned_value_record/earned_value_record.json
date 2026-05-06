@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-05 17:40:58.405408",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "evr_no",
+  "project",
+  "snapshot_date",
+  "naming_series",
+  "column_break_jcni",
+  "bac",
+  "pv",
+  "ev",
+  "ac",
+  "col_break_ident1",
+  "sv",
+  "cv",
+  "spi",
+  "cpi",
+  "col_break_ident2",
+  "eac",
+  "etc",
+  "percent_complete",
+  "tcpi"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evr_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Evr No",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bac",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Budget At Completion"
+  },
+  {
+   "default": "0",
+   "fieldname": "pv",
+   "fieldtype": "Currency",
+   "label": "Planned Value"
+  },
+  {
+   "default": "0",
+   "fieldname": "ev",
+   "fieldtype": "Currency",
+   "label": "Earned Value"
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ac",
+   "fieldtype": "Currency",
+   "label": "Actual Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "sv",
+   "fieldtype": "Currency",
+   "label": "Schedule Variance"
+  },
+  {
+   "default": "0",
+   "fieldname": "cv",
+   "fieldtype": "Currency",
+   "label": "Cost Variance"
+  },
+  {
+   "default": "0",
+   "fieldname": "spi",
+   "fieldtype": "Float",
+   "label": "SPI"
+  },
+  {
+   "default": "0",
+   "fieldname": "cpi",
+   "fieldtype": "Float",
+   "label": "CPI"
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "eac",
+   "fieldtype": "Currency",
+   "label": "Estimate at Completion / EAC"
+  },
+  {
+   "default": "0",
+   "fieldname": "etc",
+   "fieldtype": "Currency",
+   "label": "Estimate to Complete / ETC"
+  },
+  {
+   "default": "0",
+   "fieldname": "percent_complete",
+   "fieldtype": "Percent",
+   "label": "Percent Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "tcpi",
+   "fieldtype": "Float",
+   "label": "TCPI"
+  },
+  {
+   "default": "Today",
+   "fieldname": "snapshot_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Snapshot Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EVR-.YYYY.MM.-"
+  },
+  {
+   "fieldname": "column_break_jcni",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-06 10:56:11.370209",
+ "modified_by": "Administrator",
+ "module": "Progress Measurement & Billing",
+ "name": "Earned Value Record",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

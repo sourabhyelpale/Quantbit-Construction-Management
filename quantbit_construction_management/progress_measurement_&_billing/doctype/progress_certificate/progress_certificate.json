@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-05 17:40:33.519589",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_identity",
+  "cert_no",
+  "progress_claim",
+  "project",
+  "naming_series",
+  "col_break_ident1",
+  "cert_date",
+  "certified_by",
+  "submitted_amount",
+  "certified_amount",
+  "col_break_ident2",
+  "net_certified",
+  "payment_due_date",
+  "document",
+  "status",
+  "section_disputed_items",
+  "disputed_items",
+  "section_deductions",
+  "deductions",
+  "section_attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIssued\nPaid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cert_no",
+   "fieldtype": "Data",
+   "label": "Cert No",
+   "unique": 1
+  },
+  {
+   "fieldname": "col_break_ident1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "progress_claim",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Progress Claim",
+   "options": "Progress Claim",
+   "reqd": 1
+  },
+  {
+   "fieldname": "certified_by",
+   "fieldtype": "Data",
+   "label": "Certified By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_ident2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "cert_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Cert Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Due Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "submitted_amount",
+   "fieldtype": "Currency",
+   "label": "Submitted Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "certified_amount",
+   "fieldtype": "Currency",
+   "label": "Certified Amount",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "net_certified",
+   "fieldtype": "Currency",
+   "label": "Net Certified"
+  },
+  {
+   "fieldname": "section_disputed_items",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "disputed_items",
+   "fieldtype": "Table",
+   "label": "Disputed Items",
+   "options": "Disputed BOQ Item"
+  },
+  {
+   "fieldname": "section_deductions",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Additional Deductions",
+   "options": "Cert Deduction"
+  },
+  {
+   "fieldname": "section_attachments",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Attach",
+   "label": "Certificate PDF"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Progress Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PCERT-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-05-06 10:52:12.331668",
+ "modified_by": "Administrator",
+ "module": "Progress Measurement & Billing",
+ "name": "Progress Certificate",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
