@@ -7,7 +7,8 @@ frappe.ui.form.on("Costing", {
 
             return {
                 filters: {
-                    status: "Template"
+                    is_group: 1,
+                    custom_is_stage: 0
                 }
             };
 
@@ -17,7 +18,8 @@ frappe.ui.form.on("Costing", {
 
             return {
                 filters: {
-                    status: "Template"
+                    is_group: 1,
+                    custom_is_stage: 0
                 }
             };
 
