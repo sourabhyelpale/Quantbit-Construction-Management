@@ -1,0 +1,15 @@
+[
+ {
+  "buying": 1,
+  "countries": [],
+  "currency": "INR",
+  "docstatus": 0,
+  "doctype": "Price List",
+  "enabled": 1,
+  "modified": "2026-05-07 17:19:12.694521",
+  "name": "Construction Price",
+  "price_list_name": "Construction Price",
+  "price_not_uom_dependent": 0,
+  "selling": 1
+ }
+]

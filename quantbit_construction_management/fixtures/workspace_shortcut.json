@@ -334,5 +334,26 @@
   "stats_filter": null,
   "type": "DocType",
   "url": null
+ },
+ {
+  "color": "Grey",
+  "doc_view": "List",
+  "docstatus": 0,
+  "doctype": "Workspace Shortcut",
+  "format": null,
+  "icon": null,
+  "kanban_board": null,
+  "label": "UOM Conversion Rate",
+  "link_to": "UOM Conversion Rate",
+  "modified": "2026-05-06 18:24:54.217678",
+  "name": "h9er0tumke",
+  "parent": "Construction Management System",
+  "parentfield": "shortcuts",
+  "parenttype": "Workspace",
+  "report_ref_doctype": null,
+  "restrict_to_domain": null,
+  "stats_filter": null,
+  "type": "DocType",
+  "url": null
  }
 ]

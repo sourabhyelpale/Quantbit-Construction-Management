@@ -126,6 +126,12 @@ fixtures = [
             ]
         ]
     },
+    {
+        "doctype": "Price List",
+        "filters": [
+            ["name", "=", "Construction Price"]
+        ]
+    },
 ]
 
 # Includes in <head>
